@@ -105,7 +105,7 @@ body#AddInstructorForm{ background-image:url("https://hdwallsource.com/img/2014/
 
             
         <div class="form-group">
-            <asp:TextBox ID="inputId" runat="server" type="Id" class="form-control" placeholder="ID"></asp:TextBox>
+            <asp:TextBox ID="inputId" runat="server" type="String" class="form-control" placeholder="ID"></asp:TextBox>
               <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputId" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
 
@@ -122,11 +122,7 @@ body#AddInstructorForm{ background-image:url("https://hdwallsource.com/img/2014/
 
         </div>
 
-         <div class="form-group">
-            <asp:TextBox ID="inputCodeClass" runat="server" type="codeClass" class="form-control" placeholder="code class"></asp:TextBox>
-              <asp:RequiredFieldValidator ID="RequiredUsername1" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputCodeClass" ForeColor="Red"></asp:RequiredFieldValidator>
-        </div>
-
+        
         <div class="form-group">
             <asp:TextBox ID="pass" runat="server" type="pass" class="form-control" placeholder="Pass"></asp:TextBox>
               <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="pass" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -134,6 +130,7 @@ body#AddInstructorForm{ background-image:url("https://hdwallsource.com/img/2014/
 
 <center>
        <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red" ></asp:Label>
+    <br />
 
       <asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
             <br />

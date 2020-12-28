@@ -28,7 +28,7 @@ namespace GymProject.App_Code
             dal.excuteQuery(sql);
         }
 
-        public bool newInstructor( int ID, string FirstName, string LastName, double Salary, int PhoneNumber, int pass, int BranchCode)
+        public bool newInstructor( string ID, string FirstName, string LastName, double Salary, int PhoneNumber, int pass, int BranchCode)
         {
             if (!checkIdInstructor(ID))
             {
@@ -43,9 +43,9 @@ namespace GymProject.App_Code
 
         }
 
-        public bool checkIdInstructor(int ID)
+        public bool checkIdInstructor(string ID)
         {//מקבלת סיסמא מחזירה אמת אם קיימת במערכת ושקר אחרת
-            string sql = String.Format("SELECT ID FROM Instructors WHERE Instructors.ID ={0}", ID);
+            string sql = String.Format("SELECT ID FROM Instructors WHERE Instructors.ID ='{0}'", ID);
             return dal.excuteQuery(sql).Tables[0].Rows.Count != 0;
         }
 

@@ -18,7 +18,7 @@ namespace GymProject
         protected void Button1_Click(object sender, EventArgs e)
         {
             InstructorsLogic dl = new InstructorsLogic();
-            if (!dl.newInstructor( int.Parse(inputId.Text), inputFirstName.Text, inputLastName.Text, double.Parse(inputSalary.Text), int.Parse(inputPhoneNum.Text), int.Parse(pass.Text), 1111))
+            if (!dl.newInstructor(inputId.Text, inputFirstName.Text, inputLastName.Text, double.Parse(inputSalary.Text), int.Parse(inputPhoneNum.Text), int.Parse(pass.Text), 1111))
                 Label2.Text = "Instructor is already exist";
             else
                 Label2.Text = "you have successfuly add new instructor!";

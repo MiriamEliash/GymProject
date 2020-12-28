@@ -17,7 +17,7 @@ namespace GymProject.App_Code
 
         public void updateClass(double code, int numPeople)
         {
-            string sql = "UPDATE Classes SET number of people=" + numPeople + "WHERE code class=" + code;
+            string sql = "UPDATE Classes SET number of people=" + numPeople + "WHERE [code class]=" + code;
             dal.excuteQuery(sql);
         }
 

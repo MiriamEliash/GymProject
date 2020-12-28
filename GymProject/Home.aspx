@@ -46,7 +46,7 @@
         </div>
        <div> 
       
-         <asp:Button ID="Button1" runat="server" Text="Sign in" class="btn btn-sm btn-outline-secondary" />
+         <asp:Button ID="Button1" runat="server" Text="Sign in" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
                
           </div>
            <br />

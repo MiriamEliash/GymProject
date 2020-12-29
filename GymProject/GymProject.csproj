@@ -73,6 +73,7 @@
     <Content Include="AddInstructor.aspx" />
     <Content Include="App_Data\Gym.accdb" />
     <Content Include="Classes.aspx" />
+    <Content Include="ClassTime.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -80,6 +81,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Device.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Instructors.aspx" />
     <Content Include="Login.aspx" />
@@ -227,12 +229,22 @@
     <Compile Include="Classes.aspx.designer.cs">
       <DependentUpon>Classes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClassTime.aspx.cs">
+      <DependentUpon>ClassTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassTime.aspx.designer.cs">
+      <DependentUpon>ClassTime.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Device.aspx.cs">
       <DependentUpon>Device.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Device.aspx.designer.cs">
       <DependentUpon>Device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

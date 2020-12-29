@@ -19,10 +19,14 @@ namespace GymProject
         protected void Button2_Click(object sender, EventArgs e)
         {
             SubscribersLogic ul = new SubscribersLogic();
-            if (!(ul.isUser(ID.Text, pass.Text)))
+            if (!(ul.isUser( pass.Text, ID.Text)))
                 Label1.Text = "id or passwod are wrong";
             else
+            {
                 Label1.Text = "you have successfully loggin";
+                Response.Redirect("Home.aspx");
+            }
+               
         }
     }
 }

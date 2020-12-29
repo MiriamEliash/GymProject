@@ -8,7 +8,7 @@ namespace GymProject.App_Code
 {
     public class ClassesLogic
     {
-        DAL dal = new DAL();
+        private DAL dal = new DAL();
         public DataSet getAllClasses()
         {
             string sql = "SELECT * FROM Classes";
@@ -21,6 +21,13 @@ namespace GymProject.App_Code
             dal.excuteQuery(sql);
         }
 
-
+        public DataSet getInstructorsByClass(int codeClass, string Instructors)
+        {
+            int A = codeClass;
+            int B = Int32.Parse(Instructors);
+            string sql = "SELECT * FROM TeacherClass WHERE codeClass(TeacherClass.[Code class]) IN (" + A + ") AND Instructors(TeacherClass.id) IN (" + B + ")";
+            DataSet ds = dal.excuteQuery(sql);
+            return ds;
+        }
     }
 }

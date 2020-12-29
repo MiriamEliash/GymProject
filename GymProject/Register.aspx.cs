@@ -23,7 +23,11 @@ namespace GymProject
             if (!ul.newUser(First_name.Text, Last_name.Text, input_id.Text, Phone_number.Text, Password1.Text, 1111))
                 Label2.Text = "use already exist";
             else
+            {
                 Label2.Text = "you have successfuly registered!";
+                Response.Redirect("Home.aspx");
+            }
+               
         }
     }
 }

@@ -24,7 +24,7 @@ namespace GymProject
             else
             {
                 Label1.Text = "you have successfully loggin";
-                Response.Redirect("Home.aspx");
+                Response.Redirect("HomeSubscribers.aspx");
             }
                
         }

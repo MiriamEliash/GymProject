@@ -25,7 +25,7 @@ namespace GymProject
             else
             {
                 Label2.Text = "you have successfuly registered!";
-                Response.Redirect("Home.aspx");
+                Response.Redirect("HomeSubscribers.aspx");
             }
                
         }

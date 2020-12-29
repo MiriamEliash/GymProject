@@ -1,6 +1,5 @@
-﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="GymProject.Home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="HomeSubscribers.aspx.cs" Inherits="GymProject.HomeSubscribers" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -10,15 +9,13 @@
  <div class="container">
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-4 pt-1">
-            
-          </div>
+          <div class="col-4 pt-1" </div>
  
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
               
             </a>
-            <a class="btn btn-sm btn-outline-secondary" href="Register.aspx">Sign up</a>
+       
           </div>
         </div>
       </header>
@@ -45,11 +42,9 @@
 
         </div>
        <div> 
-      
-         <asp:Button ID="Button1" runat="server" Text="Sign in" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
                
-          </div>
-           <br />
+  </div>
+   <br />
 
       <div class="row mb-2">
         <div class="col-md-6">
@@ -57,27 +52,29 @@
             <div class="card-body d-flex flex-column align-items-start" style="height: 100px; padding-top: 19px; text-decoration-color: rgb(255, 255, 255);">
               
               <h3 class="mb-0">
-                <a class="text-dark" style="padding-top: 0px; margin-top: 0px; min-width: 0px; padding-bottom: 64px; padding-right: 0px; line-height: 2px;">Why you sould join?</a>
+                <a class="text-dark" style="padding-top: 0px; margin-top: 0px; min-width: 0px; padding-bottom: 64px; padding-right: 0px; line-height: 2px;">Why sport is important?</a>
               </h3>
           
-              <p class="card-text mb-auto" style="height: 90px;">THE GYM offers you a variety of sports classes with experienced instructors and range of special facilities.</p>
+              <p class="card-text mb-auto" style="height: 90px;">Exercise helps prevent many types of diseases, raises concentration and energy and strengthens the body.</p>
               
             </div>
-         <img src="Photos/woman.img.jpg"  style="width: 200px; height: 200px;"  data-holder-rendered="true">
+              
+         <img src="Photos/spinning.jpeg"  style="width: 200px; height: 200px;"  data-holder-rendered="true">
           </div>
         </div>
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-success">So..? Are you ready?</strong>
+             
               <h3 class="mb-0">
-                <a class="text-dark"> How to join?</a>
+                <a class="text-dark"> Tips to help you not give up</a>
               </h3>
-             <br />
-              <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 65px;">Click the button above, enter your details and that's it, <u>welcome!</u></p>
+         
+              <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 65px;">Stick to sports three times a week at first.Find a sport that you love and someone who will encourage you. </p>
               
             </div>
-             <img src="Photos/together.img.jpg"   data-holder-rendered="true" style="width: 200px; height: 200px;"/>
+              
+             <img src="Photos/yoga.jpeg"   data-holder-rendered="true" style="width: 200px; height: 200px;"/>
           </div>
             
         </div>
@@ -108,5 +105,6 @@
 
 
    </form>
+
 
 </asp:Content>

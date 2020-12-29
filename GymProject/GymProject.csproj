@@ -80,14 +80,18 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Corona.aspx" />
     <Content Include="Device.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="HomeSubscribers.aspx" />
     <Content Include="Instructors.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Photos\logo2.img.jpg" />
+    <Content Include="Photos\spinning.jpeg" />
     <Content Include="Photos\together.img.jpg" />
     <Content Include="Photos\woman.img.jpg" />
+    <Content Include="Photos\yoga.jpeg" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -236,6 +240,13 @@
     <Compile Include="ClassTime.aspx.designer.cs">
       <DependentUpon>ClassTime.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Corona.aspx.cs">
+      <DependentUpon>Corona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corona.aspx.designer.cs">
+      <DependentUpon>Corona.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Device.aspx.cs">
       <DependentUpon>Device.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -252,6 +263,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSubscribers.aspx.cs">
+      <DependentUpon>HomeSubscribers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeSubscribers.aspx.designer.cs">
+      <DependentUpon>HomeSubscribers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Instructors.aspx.cs">
       <DependentUpon>Instructors.aspx</DependentUpon>

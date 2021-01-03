@@ -18,15 +18,45 @@ namespace GymProject
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SubscribersLogic ul = new SubscribersLogic();
-            if (!(ul.isUser( pass.Text, ID.Text)))
-                Label1.Text = "id or passwod are wrong";
-            else
+            SubscribersLogic sl = new SubscribersLogic();
+            InstructorsLogic il = new InstructorsLogic();
+            ManagerLogic ml = new ManagerLogic();
+
+            if (sl.checkUser( pass.Text, ID.Text))
             {
                 Label1.Text = "you have successfully loggin";
+                Session["Id"] = ID.Text;
+                Session["typeAdmin"] = "Subscriber";
                 Response.Redirect("HomeSubscribers.aspx");
+
             }
-               
+            else
+            {
+                if (il.isInstructors(pass.Text, ID.Text))
+                {
+                    Label1.Text = "you have successfully loggin";
+                    Session["Id"] = ID.Text;
+                    Session["typeAdmin"] = "Instructor";
+                    Response.Redirect("HomeSubscribers.aspx");
+                }
+                else
+                {
+                    if (ml.isManager(pass.Text, ID.Text))
+                    {
+                        Label1.Text = "you have successfully loggin";
+                        Session["Id"] = ID.Text;
+                        Session["typeAdmin"] = "Manager";
+                        Response.Redirect("HomeSubscribers.aspx");
+                    }
+                    else
+                    {
+                        Label1.Text = "id or passwod are wrong";
+                    }
+
+                }
+            }
+
         }
+       
     }
 }

@@ -225,6 +225,7 @@
     <Compile Include="App_Code\DAL.cs" />
     <Compile Include="App_Code\DeviceLogic.cs" />
     <Compile Include="App_Code\InstructorsLogic.cs" />
+    <Compile Include="App_Code\ManagerLogic.cs" />
     <Compile Include="App_Code\SubscribersLogic.cs" />
     <Compile Include="Classes.aspx.cs">
       <DependentUpon>Classes.aspx</DependentUpon>

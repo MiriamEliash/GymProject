@@ -24,13 +24,13 @@ namespace GymProject
         protected global::System.Web.UI.WebControls.DropDownList codeClass;
 
         /// <summary>
-        /// Instructors control.
+        /// fullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Instructors;
+        protected global::System.Web.UI.WebControls.DropDownList fullName;
 
         /// <summary>
         /// Day control.

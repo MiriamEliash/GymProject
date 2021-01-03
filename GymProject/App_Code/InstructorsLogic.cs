@@ -44,9 +44,22 @@ namespace GymProject.App_Code
         }
 
         public bool checkIdInstructor(string ID)
-        {//מקבלת סיסמא מחזירה אמת אם קיימת במערכת ושקר אחרת
-            string sql = String.Format("SELECT ID FROM Instructors WHERE Instructors.ID ='{0}'", ID);
+        {//מקבלת תעודת זהות מחזירה אמת אם קיימת במערכת ושקר אחרת
+            string sql = String.Format("SELECT ID FROM Instructors WHERE (Instructors.ID) ='{0}'", ID);
             return dal.excuteQuery(sql).Tables[0].Rows.Count != 0;
+        }
+
+
+        public bool isInstructors(string pass, string ID)
+        {//מקבלת סיסמא מחזירה אמת אם קיימת במערכת ושקר אחרת
+            string sql = String.Format("SELECT Instructors.Pass FROM Instructors WHERE Instructors.Pass ='{0}' and Instructors.ID ='{1}'", pass, ID);
+            return dal.excuteQuery(sql).Tables[0].Rows.Count != 0;
+        }
+
+        public DataSet getInstructorsByClass(int code)
+        {
+            string sql = string.Format(("SELECT Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID WHERE CodeClass={0}"),code);
+             return dal.excuteQuery(sql);
         }
 
     }

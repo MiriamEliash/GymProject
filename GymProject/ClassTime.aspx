@@ -10,10 +10,10 @@
 
         <br />
 
-    <asp:DropDownList ID="codeClass" runat="server"></asp:DropDownList>
+    <asp:DropDownList ID="codeClass" runat="server" OnSelectedIndexChanged="codeClass_SelectedIndexChanged"></asp:DropDownList>
         <br />
         <br />
-    <asp:DropDownList ID="Instructors" runat="server"></asp:DropDownList>
+    <asp:DropDownList ID="fullName" runat="server" OnSelectedIndexChanged="fullName_SelectedIndexChanged"></asp:DropDownList>
            <br />
            <br />
     <asp:DropDownList ID="Day" runat="server"></asp:DropDownList>
@@ -24,6 +24,7 @@
 
         <br />
        <asp:Button ID="Button1"  class="btn btn-sm btn-outline-secondary"  runat="server" Text="save" OnClick="Button1_Click"></asp:Button>
+        <br />
         <br />
     </form>
 </center> 

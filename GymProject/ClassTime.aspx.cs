@@ -12,23 +12,48 @@ namespace GymProject
     public partial class ClassTime : System.Web.UI.Page
     {
         ClassesLogic des = new ClassesLogic();
+        InstructorsLogic Ins = new InstructorsLogic();
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSet ds = des.getAllClasses();
-            for (int b = 0; b < ds.Tables[0].Rows.Count; b++)
+            if (!IsPostBack)
             {
-                codeClass.Items.Insert(Int32.Parse(ds.Tables[0].Rows[b].ItemArray[0].ToString()), ds.Tables[0].Rows[b].ItemArray[1].ToString());
+                codeClass.DataSource = ds;
+                codeClass.DataBind();
+
+                codeClass.DataTextField = "name";
+                codeClass.DataValueField = "CodeClass";
+
+                codeClass.DataBind();
+                codeClass.Items.Insert(0, "בחר");
             }
 
-           // DataSet da= des.getInstructorsByClass(codeClass.SelectedValue)
-           // for (int i = 0; i < da.Tables[0].Rows.Count; i++)
-            //{
-            //    Instructors.Items.Insert(i, ds.Tables[0].Rows[i].ItemArray[0].ToString());
-           // }
+        }
+        protected void codeClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                 int x = Int32.Parse(codeClass.SelectedValue);
+                  DataSet ds = Ins.getInstructorsByClass(x);
+           
+                 if (!IsPostBack)
+                 {
+                     fullName.DataSource = ds;
+                     fullName.DataBind();
+            
+                     fullName.DataTextField = "[fullName]";
+                     fullName.DataValueField = "[ID]";
+           
+                     fullName.DataBind();
+                     fullName.Items.Insert(0, "בחר");
+                 }
+        }
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void fullName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -17,16 +17,16 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
+   
     <div class="container">
 
-        <center>
+         <center>
+
            <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between"> 
           
           <a class="p-2 text-muted" href="#" spellcheckker="false"
-              style="color: #ccc;background-color:  #e2ecef;">List of sports clubs</a>
+              style="color: black;background-color:  #e2ecef;">List of sports clubs</a>
         
           <a class="p-2 text-muted" href="#" spellcheckker="false"
               style="color: #ccc;background-color:  #e2ecef;">List of devices</a>
@@ -35,17 +35,18 @@
         </nav>
       </div>
 
-      <div class="jumbotron">
+      <div class="jumbotron" style="background-color: beige">
           <p class="lead" ><b>Corona regulations</b></p>
 
         <p class="lead">At the meeting it was decided that the fitness industry it will do so under the outline proposed by the Fitness Forum to the Ministry of Health, allowing full control over the guidelines and absolute ability to prevent crowds and queues and includes the following rules:</p>
-        <p></p>
+        
       </div>
 
-      <div class="row marketing">
+      <div class="row marketing" style="text-align:center; margin:0 auto;">
+        
         <div class="col-lg-6">
 
-          <p style="float: none; "><b>* Fitness clubs will open in green and yellow cities only.</b><div></div></p>
+          <p style="float: none; "><b>* Fitness clubs will open in green and yellow cities only.</b></p>
 
           <p style="float: none;"><b>* We will not accept a person to the fitness club who has symptoms of coronary heart disease / fever.</b></p>
 
@@ -53,7 +54,10 @@
           <p style="float: none;"><b>* During all hours of operation, the staff will wear masks and follow the instructions.</b></p>
 
           
-          <p style="float: none;"><b>* We will provide disposable wipes for cleaning and disinfecting equipment throughout the club, and alcohol stations near each activity area.</b></p><p style="text-align: center;"><b>* It will be maintained that the customer audience will be local only and only for regular subscribers in order to avoid random meetings.</b></p><p></p>
+          <p style="float: none;"><b>* We will provide disposable wipes for cleaning and disinfecting equipment throughout the club, and alcohol stations near each activity area.</b></p>
+
+           <p style="text-align: center;"><b>* It will be maintained that the customer audience will be local only and only for regular subscribers in order to avoid random meetings.</b></p>
+    
         
         </div>
       </div>

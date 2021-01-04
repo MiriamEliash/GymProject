@@ -10,16 +10,31 @@
 
         <br />
 
-    <asp:DropDownList ID="codeClass" runat="server" OnSelectedIndexChanged="codeClass_SelectedIndexChanged"></asp:DropDownList>
+    <asp:DropDownList ID="codeClass" runat="server" OnSelectedIndexChanged="codeClass_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
         <br />
         <br />
-    <asp:DropDownList ID="fullName" runat="server" OnSelectedIndexChanged="fullName_SelectedIndexChanged"></asp:DropDownList>
+    <asp:DropDownList ID="fullName" runat="server" OnSelectedIndexChanged="fullName_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
            <br />
            <br />
-    <asp:DropDownList ID="Day" runat="server"></asp:DropDownList>
+    <asp:DropDownList ID="Day" runat="server" OnSelectedIndexChanged="Day_SelectedIndexChanged" AutoPostBack="true">
+        <asp:ListItem Value="1">Sunday</asp:ListItem>
+        <asp:ListItem Value="2">Monday</asp:ListItem>
+        <asp:ListItem Value="3">Tuesday</asp:ListItem>
+        <asp:ListItem Value="4">Wednesday</asp:ListItem>
+        <asp:ListItem Value="5">Thursday</asp:ListItem>
+        <asp:ListItem Value="6">Friday</asp:ListItem>
+        <asp:ListItem Value="7">Saturday</asp:ListItem>
+    </asp:DropDownList>
            <br />
            <br />
-    <asp:DropDownList ID="Hour" runat="server"></asp:DropDownList>
+    <asp:DropDownList ID="Hour" runat="server" AutoPostBack="true">
+        <asp:ListItem Value="1">08:00</asp:ListItem>
+        <asp:ListItem Value="2">10:00</asp:ListItem>
+        <asp:ListItem Value="3">15:00</asp:ListItem>
+        <asp:ListItem Value="4">16:00</asp:ListItem>
+        <asp:ListItem Value="5">20:00</asp:ListItem>
+        <asp:ListItem Value="6">21:00</asp:ListItem>
+    </asp:DropDownList>
            <br />
 
         <br />

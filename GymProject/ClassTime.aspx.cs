@@ -52,8 +52,8 @@ namespace GymProject
 
 
        
-        protected void fullName_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        //protected void fullName_SelectedIndexChanged(object sender, EventArgs e)
+       // {
            // int x = Int32.Parse(fullName.SelectedValue);
           //  DataSet ds = dt.getDayByCodeClassTeacher(x);
 
@@ -66,10 +66,10 @@ namespace GymProject
              //   Day.DataBind();
              //   Day.Items.Insert(0, "בחר");
             
-        }
+       // }
 
-        protected void Day_SelectedIndexChanged(object sender, EventArgs e)
-        {
+       // protected void Day_SelectedIndexChanged(object sender, EventArgs e)
+       // {
           //  int code = Int32.Parse(fullName.SelectedValue);
            // int day= Int32.Parse(Day.SelectedValue);
            // DataSet ds = dt.getHourByCodeClassTeacher(code,day);
@@ -84,13 +84,20 @@ namespace GymProject
              //   Hour.DataBind();
               //  Hour.Items.Insert(0, "בחר");
             
-        }
+       // }
 
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
+      //  protected void Button1_Click(object sender, EventArgs e)
+      //  {
+      //     
+      //      if (!dt.newClass(int.Parse(fullName.SelectedValue.Text), int.Parse(Day.Text), DateTime.Parse(Hour.Text)))
+      //          Label2.Text = "class already exist";
+      //      else
+      //      {
+      //          Label2.Text = "you have successfuly add new class!";
+      //          Response.Redirect("ClassTime.aspx");
+      //      }
+      //  }
 
     }
 }

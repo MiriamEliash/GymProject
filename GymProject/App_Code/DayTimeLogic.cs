@@ -16,7 +16,7 @@ namespace GymProject.App_Code
             {
                 string sql1 = String.Format("INSERT INTO DayTime ([codeClassTeacher],[day],[hour]) VALUES ('{0}', '{1}','{2}','{3}','{4}','{5}')", codeClassTeacher, day, hour);
                 DataSet ds = dal.excuteQuery(sql1);
-                return true;
+               return true;
             }
             else
             {

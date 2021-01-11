@@ -87,17 +87,17 @@ namespace GymProject
        // }
 
 
-      //  protected void Button1_Click(object sender, EventArgs e)
-      //  {
-      //     
-      //      if (!dt.newClass(int.Parse(fullName.SelectedValue.Text), int.Parse(Day.Text), DateTime.Parse(Hour.Text)))
-      //          Label2.Text = "class already exist";
-      //      else
-      //      {
-      //          Label2.Text = "you have successfuly add new class!";
-      //          Response.Redirect("ClassTime.aspx");
-      //      }
-      //  }
+       protected void Button1_Click(object sender, EventArgs e)
+        {
+           int code = Int32.Parse(dt.getMaxCode())+1;
+           if (!dt.newClass(code,Int32.Parse(fullName.SelectedValue), Int32.Parse(Day.Text), DateTime.Parse(Hour.Text)))
+                Label2.Text = "teacher already exist";
+            else
+            {
+              Label2.Text = "you have successfuly add new class!";
+                Response.Redirect("ClassTime.aspx");
+            }
+      }
 
     }
 }

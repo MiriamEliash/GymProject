@@ -10,11 +10,11 @@ namespace GymProject.App_Code
     {
         DAL dal = new DAL();
 
-        public bool newClass(int code, int codeClassTeacher, int day, DateTime hour)
+        public bool newClass(int code, int codeClassTeacher, int day, string hour)
         {
             if (!check(day, hour, codeClassTeacher))//במידה ושם המשתמש ותעודת הזהות לא תפוסים
             {
-                string sql1 = String.Format("INSERT INTO DayTime (code,codeClassTeacher,day,hour) VALUES ('{0}', '{1}','{2}','{3}')", code,codeClassTeacher, day, hour);
+                string sql1 = String.Format("INSERT INTO DayTime (code,codeClassTeacher,day,hour) VALUES ('{0}','{1}','{2}','{3}')", code,codeClassTeacher, day, hour);
                 DataSet ds = dal.excuteQuery(sql1);
                return true;
             }
@@ -25,7 +25,7 @@ namespace GymProject.App_Code
 
         }
 
-        public bool check(int day, DateTime hour,int codeClassTeacher)
+        public bool check(int day, string hour,int codeClassTeacher)
 
         {//בודקת אם יש מדריך באותו יום ושעה
             string sql = String.Format("SELECT DayTime.codeClassTeacher FROM DayTime WHERE DayTime.day ='{0}' and DayTime.hour ='{1}'", day, hour, codeClassTeacher);

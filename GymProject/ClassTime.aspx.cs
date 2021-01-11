@@ -36,37 +36,27 @@ namespace GymProject
         }
         protected void codeClass_SelectedIndexChanged(object sender, EventArgs e)
         {
-                 int x = Int32.Parse(codeClass.SelectedValue);
-                  DataSet ds = dc.getInstructorsByClass(x);
-          
-                     fullName.DataSource = ds;
-                     fullName.DataBind();
-            
-                     fullName.DataTextField = "fullName";
-                     fullName.DataValueField = "Code";
-           
-                     fullName.DataBind();
-                     fullName.Items.Insert(0, "בחר");
-                 
+            int x = Int32.Parse(codeClass.SelectedValue);
+            DataSet ds = dc.getInstructorsByClass(x);
+
+            fullName.DataSource = ds;
+            fullName.DataBind();
+
+            fullName.DataTextField = "fullName";
+            fullName.DataValueField = "Code";
+
+            fullName.DataBind();
+            fullName.Items.Insert(0, "בחר");
+
         }
 
 
        
-        //protected void fullName_SelectedIndexChanged(object sender, EventArgs e)
-       // {
-           // int x = Int32.Parse(fullName.SelectedValue);
-          //  DataSet ds = dt.getDayByCodeClassTeacher(x);
+        protected void fullName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
 
-            //    Day.DataSource = ds;
-            //    Day.DataBind();
-
-             //   Day.DataTextField = "Day";
-             //   Day.DataValueField = "Day";
-            
-             //   Day.DataBind();
-             //   Day.Items.Insert(0, "בחר");
-            
-       // }
+        }
 
        // protected void Day_SelectedIndexChanged(object sender, EventArgs e)
        // {
@@ -90,8 +80,8 @@ namespace GymProject
        protected void Button1_Click(object sender, EventArgs e)
         {
            int code = Int32.Parse(dt.getMaxCode())+1;
-           if (!dt.newClass(code,Int32.Parse(fullName.SelectedValue), Int32.Parse(Day.Text), DateTime.Parse(Hour.Text)))
-                Label2.Text = "teacher already exist";
+           if (!dt.newClass(code, Int32.Parse(fullName.SelectedValue), Int32.Parse(Day.Text), Hour.Text))
+                Label2.Text = "teacher is already exist";
             else
             {
               Label2.Text = "you have successfuly add new class!";

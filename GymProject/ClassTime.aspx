@@ -16,7 +16,7 @@
     <asp:DropDownList ID="fullName" runat="server" OnSelectedIndexChanged="fullName_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
            <br />
            <br />
-    <asp:DropDownList ID="Day" runat="server" OnSelectedIndexChanged="Day_SelectedIndexChanged" AutoPostBack="true">
+    <asp:DropDownList ID="Day" runat="server"  AutoPostBack="true">
         <asp:ListItem Value="1">Sunday</asp:ListItem>
         <asp:ListItem Value="2">Monday</asp:ListItem>
         <asp:ListItem Value="3">Tuesday</asp:ListItem>

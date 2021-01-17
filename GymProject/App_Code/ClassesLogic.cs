@@ -21,6 +21,12 @@ namespace GymProject.App_Code
             dal.excuteQuery(sql);
         }
 
+        public DataSet getNameByCodeClassTeacher(int CodeClassTeacher)
+        {
+             string sql = string.Format(("SELECT Classes.name FROM Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass WHERE CodeClassTeacher={0}"), CodeClassTeacher);
+              return dal.excuteQuery(sql);
+        }
+
       //  public DataSet getInstructorsByClass(int codeClass, string Instructors)
        // {
        //     int A = codeClass;

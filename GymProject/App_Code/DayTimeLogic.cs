@@ -14,9 +14,9 @@ namespace GymProject.App_Code
         {
             if (!check(day, hour, codeClassTeacher))//במידה ושם המשתמש ותעודת הזהות לא תפוסים
             {
-                string sql1 = String.Format("INSERT INTO DayTime (code,codeClassTeacher,day,hour) VALUES ('{0}','{1}','{2}','{3}')", code,codeClassTeacher, day, hour);
+                string sql1 = String.Format("INSERT INTO DayTime (code,codeClassTeacher,day,hour) VALUES ('{0}','{1}','{2}','{3}')", code, codeClassTeacher, day, hour);
                 DataSet ds = dal.excuteQuery(sql1);
-               return true;
+                return true;
             }
             else
             {
@@ -25,7 +25,7 @@ namespace GymProject.App_Code
 
         }
 
-        public bool check(int day, string hour,int codeClassTeacher)
+        public bool check(int day, string hour, int codeClassTeacher)
 
         {//בודקת אם יש מדריך באותו יום ושעה
             string sql = String.Format("SELECT DayTime.codeClassTeacher FROM DayTime WHERE DayTime.day ='{0}' and DayTime.hour ='{1}'", day, hour, codeClassTeacher);
@@ -46,11 +46,20 @@ namespace GymProject.App_Code
             return dal.excuteQuery(sql);
         }
 
-        public DataSet getHourByCodeClassTeacher(int code,int day)
+        public DataSet getHourByCodeClassTeacher(int code, int day)
         {
-            string sql = string.Format(("SELECT DayTime.hour FROM DayTime WHERE DayTime.codeClassTeacher={0} AND DayTime.day={1}"), code,day);
+            string sql = string.Format(("SELECT DayTime.hour FROM DayTime WHERE DayTime.codeClassTeacher={0} AND DayTime.day={1}"), code, day);
             return dal.excuteQuery(sql);
         }
+
+        /* public DataSet getNameByCodeClassTeacher(int CodeClassTeacher)
+         {
+             string sql = string.Format(("SELECT Classes.name FROM Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass WHERE CodeClassTeacher={0}"), CodeClassTeacher);
+              return dal.excuteQuery(sql);
+         }
+        */
+
+
 
     }
 }

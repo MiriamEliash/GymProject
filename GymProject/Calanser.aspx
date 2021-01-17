@@ -27,6 +27,7 @@ td
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <br />
+    <asp:Button ID="Button1" runat="server" Text="הבא" CommandName="'<%Eval("code") %>" OnClick="Button1_Click" />
 
      <div class="jumbotron p-3 p-md-5 text-black rounded" " style="background-color: beige">
         <div class="col-md-6 px-0">

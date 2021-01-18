@@ -72,7 +72,7 @@
     <Content Include="AddDevice.aspx" />
     <Content Include="AddInstructor.aspx" />
     <Content Include="App_Data\Gym.accdb" />
-    <Content Include="Calanser.aspx" />
+    <Content Include="Calander.aspx" />
     <Content Include="Charge.aspx" />
     <Content Include="Classes.aspx" />
     <Content Include="ClassTime.aspx" />
@@ -232,12 +232,12 @@
     <Compile Include="App_Code\ManagerLogic.cs" />
     <Compile Include="App_Code\SubscribersLogic.cs" />
     <Compile Include="App_Code\TeacherClassLogic.cs" />
-    <Compile Include="Calanser.aspx.cs">
-      <DependentUpon>Calanser.aspx</DependentUpon>
+    <Compile Include="Calander.aspx.cs">
+      <DependentUpon>Calander.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Calanser.aspx.designer.cs">
-      <DependentUpon>Calanser.aspx</DependentUpon>
+    <Compile Include="Calander.aspx.designer.cs">
+      <DependentUpon>Calander.aspx</DependentUpon>
     </Compile>
     <Compile Include="Charge.aspx.cs">
       <DependentUpon>Charge.aspx</DependentUpon>

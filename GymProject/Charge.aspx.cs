@@ -1,6 +1,7 @@
 ﻿using GymProject.App_Code;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,13 +14,21 @@ namespace GymProject
         DayTimeLogic dt = new DayTimeLogic();
         protected void Page_Load(object sender, EventArgs e)
         {
-             if(! IsPostBack)
-              {
-                  string code = Request.QueryString["code"];
-                // DataSet dt=dt.____ //זימון השאילתה
-                // שם הפקד.text = Tables[0].rows[0][שם השדה].ToString(); 
-              }
-            
+            string code = Request.QueryString["code"];
+            if (! IsPostBack)
+            {
+                /*
+                int codeC = Int32.Parse(code);
+                DataSet ds = dt.show(codeC);
+                Label2.Text = dt.Tables[0].Rows[0][0].ToString();
+                Label3.Text = dt.Tables[0].Rows[0][1].ToString();
+                Label4.Text = dt.Tables[0].Rows[0][2].ToString();
+                Label5.Text = dt.Tables[0].Rows[0][3].ToString();
+
+
+                */
+            }
+
         }
     }
 }

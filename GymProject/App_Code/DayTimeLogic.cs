@@ -10,7 +10,7 @@ namespace GymProject.App_Code
     {
         DAL dal = new DAL();
 
-        public bool newClass(int code, int codeClassTeacher, int day, string hour)
+        public bool newClass(int code, int codeClassTeacher, int day, DateTime hour)
         {
             if (!check(day, hour, codeClassTeacher))//במידה ושם המשתמש ותעודת הזהות לא תפוסים
             {
@@ -25,7 +25,7 @@ namespace GymProject.App_Code
 
         }
 
-        public bool check(int day, string hour, int codeClassTeacher)
+        public bool check(int day, DateTime hour, int codeClassTeacher)
 
         {//בודקת אם יש מדריך באותו יום ושעה
             string sql = String.Format("SELECT DayTime.codeClassTeacher FROM DayTime WHERE DayTime.day ='{0}' and DayTime.hour ='{1}'", day, hour, codeClassTeacher);
@@ -51,10 +51,28 @@ namespace GymProject.App_Code
             string sql = string.Format(("SELECT DayTime.hour FROM DayTime WHERE DayTime.codeClassTeacher={0} AND DayTime.day={1}"), code, day);
             return dal.excuteQuery(sql);
         }
+        public DataSet show(int code)
+        {
+            //שם המדריך מהקוד ממדריכים
+            //שם החוג מהקוד מחוגים
+
+            //  string nameT = getNameByCodeClassTeacher(int codeT);
+            //   string nameC = getInstructorsByClass(int codeT);
+
+             string sql = string.Format(("SELECT * FROM DayTime  WHERE DayTime.codeClassTeacher ='{0}' DayTime.day ='{1}' AND DayTime.hour='{2}' "), code);
+            return dal.excuteQuery(sql);
+        }
+
+        public DataSet show2(int code)
+        {
+
+            string sql = string.Format(("SELECT Classes.name AS nameClass FROM Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass WHERE CodeClassTeacher={0}"), code);
+            return dal.excuteQuery(sql);
+        }
 
         /* public DataSet getNameByCodeClassTeacher(int CodeClassTeacher)
          {
-             string sql = string.Format(("SELECT Classes.name FROM Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass WHERE CodeClassTeacher={0}"), CodeClassTeacher);
+             string sql = string.Format(("SELECT Classes.name AS nameClass FROM Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass WHERE CodeClassTeacher={0}"), CodeClassTeacher);
               return dal.excuteQuery(sql);
          }
         */

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Calanser.aspx.cs" Inherits="GymProject.Calanser" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Calander.aspx.cs" Inherits="GymProject.Calanser" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 <style>
@@ -26,8 +26,17 @@ td
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form runat="server">
    <br />
-    <asp:Button ID="Button1" runat="server" Text="הבא" CommandName="'<%Eval("code") %>" OnClick="Button1_Click" />
+
+    <asp:Label ID="codeT" runat="server" Text='<%#Eval("1") %>'></asp:Label>
+    <asp:Label ID="day" runat="server" Text='<%#Eval("1") %>'></asp:Label>
+    <asp:Label ID="hour" runat="server"  Text='<%#Eval("8:00") %>'></asp:Label>
+
+    <asp:Button ID="Button1" runat="server" Text="הבא" CommandName='<%#Eval("code") %>'  OnClick="Button1_Click" />
+
+
+        <asp:Repeater ID="Repeater1" runat="server"></asp:Repeater>
 
      <div class="jumbotron p-3 p-md-5 text-black rounded" " style="background-color: beige">
         <div class="col-md-6 px-0">
@@ -110,5 +119,5 @@ td
   </tr>
 </table>
     <br />
-
+    </form>
 </asp:Content>

@@ -56,11 +56,11 @@ namespace GymProject.App_Code
             return dal.excuteQuery(sql).Tables[0].Rows.Count != 0;
         }
 
-      //  public DataSet getInstructorsByClass(int code)
-      //  {
-      //      string sql = string.Format(("SELECT Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID WHERE CodeClass={0}"),code);
-      //       return dal.excuteQuery(sql);
-      //  }
+        public DataSet getInstructorsByClass(int code)
+        {
+            string sql = string.Format(("SELECT Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID WHERE CodeClass={0}"),code);
+             return dal.excuteQuery(sql);
+        }
 
     }
 }

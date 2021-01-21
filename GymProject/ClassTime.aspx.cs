@@ -79,15 +79,24 @@ namespace GymProject
 
        protected void Button1_Click(object sender, EventArgs e)
         {
-           int code = Int32.Parse(dt.getMaxCode())+1;
-           if (!dt.newClass(code, Int32.Parse(fullName.SelectedValue), Int32.Parse(Day.Text),  Int32.Parse(Hour.Text)))
+           int Code = Int32.Parse(dt.getMaxCode())+1;
+           if (!dt.newClass(Code, Int32.Parse(fullName.SelectedValue), Int32.Parse(Day.Text),  Int32.Parse(Hour.Text)))
                 Label2.Text = "teacher is already exist";
             else
             {
-              Label2.Text = "you have successfuly add new class!";
+            
+                Label2.Text = "you have successfuly add new class!";
                 Response.Redirect("ClassTime.aspx");
-            }
-      }
 
+            }
+       }
+
+
+        
+
+
+
+
+   
     }
 }

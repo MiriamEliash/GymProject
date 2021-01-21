@@ -17,7 +17,7 @@ namespace GymProject
         {
             if (!IsPostBack)
             {
-                Repeater1.DataSource = CreateDataSource();
+               Repeater1.DataSource = CreateDataSource();
                 Repeater1.DataBind();
             }
         }

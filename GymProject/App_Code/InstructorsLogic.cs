@@ -28,11 +28,11 @@ namespace GymProject.App_Code
             dal.excuteQuery(sql);
         }
 
-        public bool newInstructor( string ID, string FirstName, string LastName, double Salary, int PhoneNumber, int pass, int BranchCode)
+        public bool newInstructor( string ID, string FirstName, string LastName,  int PhoneNumber,double Salary, int pass, int BranchCode)
         {
             if (!checkIdInstructor(ID))
             {
-                string sql1 = String.Format("INSERT INTO Instructors ([ID],[First name],[Last name],[Phone number],[Salary],[Pass],[Branch Code]) VALUES ('{0}', '{1}','{2}','{3}','{4}','{5}','{6}')", ID, FirstName, LastName, Salary, PhoneNumber, pass, BranchCode);
+                string sql1 = String.Format("INSERT INTO Instructors ([ID],[First name],[Last name],[Phone number],[Salary],[Pass],[Branch Code]) VALUES ('{0}', '{1}','{2}','{3}','{4}','{5}','{6}')", ID, FirstName, LastName, PhoneNumber, Salary, pass, BranchCode);
                 DataSet ds = dal.excuteQuery(sql1);
                 return true;
             }

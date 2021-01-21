@@ -14,20 +14,20 @@ namespace GymProject
         DayTimeLogic dt = new DayTimeLogic();
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             string code = Request.QueryString["code"];
             if (! IsPostBack)
             {
-                /*
+                
                 int codeC = Int32.Parse(code);
                 DataSet ds = dt.show(codeC);
                 Label2.Text = dt.Tables[0].Rows[0][0].ToString();
                 Label3.Text = dt.Tables[0].Rows[0][1].ToString();
                 Label4.Text = dt.Tables[0].Rows[0][2].ToString();
                 Label5.Text = dt.Tables[0].Rows[0][3].ToString();
-
-
-                */
+  
             }
+            */
 
         }
     }

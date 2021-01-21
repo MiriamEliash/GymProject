@@ -51,22 +51,12 @@ namespace GymProject.App_Code
             string sql = string.Format(("SELECT DayTime.hour FROM DayTime WHERE DayTime.codeClassTeacher={0} AND DayTime.day={1}"), code, day);
             return dal.excuteQuery(sql);
         }
+
+
         public DataSet show(int code)
         {
-            //שם המדריך מהקוד ממדריכים
-            //שם החוג מהקוד מחוגים
 
-            //  string nameT = getNameByCodeClassTeacher(int codeT);
-            //   string nameC = getInstructorsByClass(int codeT);
-
-             string sql = string.Format(("SELECT * FROM DayTime  WHERE DayTime.codeClassTeacher ='{0}' DayTime.day ='{1}' AND DayTime.hour='{2}' "), code);
-            return dal.excuteQuery(sql);
-        }
-
-        public DataSet show2(int code)
-        {
-
-            string sql = string.Format(("SELECT Classes.name AS nameClass FROM Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass WHERE CodeClassTeacher={0}"), code);
+            string sql = string.Format(("SELECT DayTime.code, (Classes.name AS nameClass FROM ((Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)),( Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID ) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)), DayTime.day, DayTime.hour   WHERE DayTime.Code={0}"), code);
             return dal.excuteQuery(sql);
         }
 

@@ -23,11 +23,11 @@ namespace GymProject
         }
         public DataView CreateDataSource()
         {
-            DataSet ds = dt.show();
-            DataTable dt = ds.Tables[0];
+            DataSet ds = dt.show(code); 
+            DataTable dt = ds.Tables[0]; //הטבלה שקיבלנו
             // Create sample data for the DataList control.
             DataTable ndt = new DataTable();
-            DataRow dr = null;
+            DataRow dr = null; //טבלה חדשה שאנחנו בונים
             int hour = 0;
             ndt.Columns.Add(new DataColumn("SetHour", typeof(Int32)));
             ndt.Columns.Add(new DataColumn("Sunday", typeof(Int32)));
@@ -58,7 +58,7 @@ namespace GymProject
                 string dayValue = row["day"].ToString();
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
-                dr[day] = dr[day].ToString() + "</br> <a href='RegisterPage.aspx'>" + row["codeClassTeacher"] + "</a>";
+                dr[day] = dr[day].ToString() + "</br> <a href='RegisterPage.aspx'>" + row["Code"] + "</a>";
 
             }
             DataView dv = new DataView(ndt);

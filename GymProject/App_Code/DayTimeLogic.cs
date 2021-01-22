@@ -10,11 +10,11 @@ namespace GymProject.App_Code
     {
         DAL dal = new DAL();
 
-        public bool newClass(int code, int codeClassTeacher, int day, DateTime hour)
+        public bool newClass(int code, int codeClassTeacher, int day,  TimeSpan hour)
         {
             if (!check(day, hour, codeClassTeacher))//במידה ושם המשתמש ותעודת הזהות לא תפוסים
             {
-                string sql1 = String.Format("INSERT INTO DayTime (code,codeClassTeacher,day,hour) VALUES ('{0}','{1}','{2}','{3}')", code, codeClassTeacher, day, hour);
+                string sql1 = String.Format("INSERT INTO DayTime (code,codeClassTeacher,day,hour) VALUES ({0},{1},{2},#{3}#)", code, codeClassTeacher, day, hour);
                 DataSet ds = dal.excuteQuery(sql1);
                 return true;
             }
@@ -25,10 +25,10 @@ namespace GymProject.App_Code
 
         }
 
-        public bool check(int day, DateTime hour, int codeClassTeacher)
+        public bool check(int day, TimeSpan hour, int codeClassTeacher)
 
         {//בודקת אם יש מדריך באותו יום ושעה
-            string sql = String.Format("SELECT DayTime.codeClassTeacher FROM DayTime WHERE DayTime.day ='{0}' and DayTime.hour ='{1}'", day, hour, codeClassTeacher);
+            string sql = String.Format("SELECT DayTime.codeClassTeacher FROM DayTime WHERE DayTime.day ={0} and DayTime.hour ='{1}'", day, hour, codeClassTeacher);
             return dal.excuteQuery(sql).Tables[0].Rows.Count != 0;
         }
 
@@ -53,12 +53,16 @@ namespace GymProject.App_Code
         }
 
 
-        public DataSet show(int code)
+        public DataSet show()
         {
 
-            string sql = string.Format(("SELECT DayTime.code, (Classes.name AS nameClass FROM ((Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)),( Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID ) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)), DayTime.day, DayTime.hour   WHERE DayTime.Code={0}"), code);
+            string sql = "SELECT DayTime.code, DayTime.day, DayTime.hour ,Classes.name AS [name Class],  Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM (((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON Classes.CodeClass=TeacherClass.CodeClass)INNER JOIN Instructors ON Instructors.ID=TeacherClass.id) ORDER BY hour,day " ;
+            //string sql = string.Format(("SELECT DayTime.code, (Classes.name AS nameClass FROM ((Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)),( Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID ) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)), DayTime.day, DayTime.hour   WHERE DayTime.Code={0}"), code);
+          
             return dal.excuteQuery(sql);
         }
+
+
 
         /* public DataSet getNameByCodeClassTeacher(int CodeClassTeacher)
          {

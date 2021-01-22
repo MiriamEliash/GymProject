@@ -80,7 +80,7 @@ namespace GymProject
        protected void Button1_Click(object sender, EventArgs e)
         {
            int Code = Int32.Parse(dt.getMaxCode())+1;
-           if (!dt.newClass(Code, Int32.Parse(fullName.SelectedValue), Int32.Parse(Day.Text),  Int32.Parse(Hour.Text)))
+           if (!dt.newClass(Code, Int32.Parse(fullName.SelectedValue), Int32.Parse(Day.Text),  TimeSpan.Parse(Hour.SelectedItem.Text)))
                 Label2.Text = "teacher is already exist";
             else
             {

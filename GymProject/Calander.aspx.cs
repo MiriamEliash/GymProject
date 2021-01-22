@@ -11,7 +11,7 @@ namespace GymProject
 {
     public partial class Calanser : System.Web.UI.Page
     {
-        DayTimeLogic dt = new DayTimeLogic();
+        DayTimeLogic dtl = new DayTimeLogic();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +23,7 @@ namespace GymProject
         }
         public DataView CreateDataSource()
         {
-            DataSet ds = dt.show(code); 
+            DataSet ds = dtl.show(); 
             DataTable dt = ds.Tables[0]; //הטבלה שקיבלנו
             // Create sample data for the DataList control.
             DataTable ndt = new DataTable();
@@ -58,6 +58,7 @@ namespace GymProject
                 string dayValue = row["day"].ToString();
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
+
                 dr[day] = dr[day].ToString() + "</br> <a href='RegisterPage.aspx'>" + row["Code"] + "</a>";
 
             }

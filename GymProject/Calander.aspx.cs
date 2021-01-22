@@ -59,7 +59,8 @@ namespace GymProject
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
 
-                dr[day] = dr[day].ToString() + "</br> <a href='RegisterPage.aspx'>" + row["Code"] + "</a>";
+                dr[day] = dr[day].ToString() + "</br> <a href='Carge.aspx'>" + row["Code"] + "</a>";
+
 
             }
             DataView dv = new DataView(ndt);

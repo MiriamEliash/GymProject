@@ -17,11 +17,13 @@ namespace GymProject.App_Code
             return dal.excuteQuery(sql).Tables[0].Rows.Count != 0;
         }
 
-        public bool newClass(string ID , int numUsedClasses, int numTotalClasses)
+        public bool newCharge(string UserId, int numUsedClasses, int numTotalClasses, string Card, DateTime ChargeDate)
         {
-            if (check(ID))//במידה וסיים את מלאי החוגים
+            if (check(UserId))//במידה וסיים את מלאי החוגים
             {
-                string sql1 = String.Format("INSERT INTO Charge (ID,numUsedClasses,numTotalClasses) VALUES ('{0}',{1},{2})", ID, numUsedClasses, numTotalClasses);
+                string sql1 = String.Format("INSERT INTO Charge (UserId,numUsedClasses,numTotalClasses,Card,ChargeDate) VALUES ('{0}',{1},{2},'{3}',#{4}#)", UserId, numUsedClasses, numTotalClasses, Card, ChargeDate);
+                dal.excuteQuery(sql1);
+                sql1 = string.Format("SELECT MAX(chargeId) FROM Charge WHERE UserId='{0}'", UserId);
                 DataSet ds = dal.excuteQuery(sql1);
                 return true;
             }

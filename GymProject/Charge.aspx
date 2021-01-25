@@ -8,7 +8,7 @@
 
         body 
         { 
-            margin-top:20px; 
+            margin-top:20px;
 
         }
 .panel-title 
@@ -31,25 +31,14 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
 <form runat="server">
-
-    <asp:Label ID="Label2" runat="server" Text="nameClass"></asp:Label>
-    <asp:Label ID="Label3" runat="server" Text="NameInstructor"></asp:Label>
-    <asp:Label ID="Label4" runat="server" Text="day"></asp:Label>
-    <asp:Label ID="Label5" runat="server" Text="hour"></asp:Label>
-
-           
-
   <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Payment Details </h3>
-                    <div class="checkbox pull-right">
-                             <asp:CheckBox ID="CheckBox1" runat="server" type="checkbox" Text=" Remember" />
-
-                    </div>
                 </div>
                 <div class="panel-body">
                     <form role="form">
@@ -64,20 +53,19 @@
                     <div class="row">
                         <div class="col-xs-7 col-md-7">
                             <div class="form-group">
-                                 
-                                <label for="expityMonth"> EXPIRY DATE</label>
+                                <asp:Label ID="Label2" for="expityMonth" runat="server" Text="EXPIRY DATE"></asp:Label>
+                            
                                 <div class="col-xs-6 col-lg-6 pl-ziro">
-                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                    <asp:TextBox ID="expityMonth"  type="text" class="form-control" placeholder="MM" runat="server"></asp:TextBox>
                                 </div>
-                                <div class="col-xs-6 col-lg-6 pl-ziro">
-                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required /></div>
+                                <div class="col-xs-6 col-lg-6 pl-ziro"> 
+                                    <asp:TextBox ID="expityYear"  type="text" class="form-control" placeholder="YY" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-xs-5 col-md-5 pull-right">
                             <div class="form-group">
-                                <label for="cvCode">
-                                    CV CODE</label>
-                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                <asp:Label ID="Label3" for="cvCode" runat="server" Text=" CV CODE"></asp:Label>
+                                <asp:TextBox ID="cvCode" type="password" class="form-control" placeholder="CV" runat="server"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -89,10 +77,11 @@
                 </li>
             </ul>
             <br/>
-            <a href=" " class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+            <asp:Button ID="Button1"  class="btn btn-success btn-lg btn-block" runat="server" Text="Pay" OnClick="Button1_Click" />
         </div>
     </div>
 </div>
 
 </form>
+    
 </asp:Content>

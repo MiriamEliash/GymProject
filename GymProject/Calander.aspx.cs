@@ -12,7 +12,7 @@ namespace GymProject
     public partial class Calanser : System.Web.UI.Page
     {
         DayTimeLogic dtl = new DayTimeLogic();
-
+        ChargeLogic cl = new ChargeLogic();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -58,9 +58,21 @@ namespace GymProject
                 string dayValue = row["day"].ToString();
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
+              
+                if (Session["Type"].Equals("Subscriber"))
+                {
 
-                dr[day] = dr[day].ToString() + "</br> <a href='Carge.aspx'>" + row["Code"] + "</a>";
+                    // צריך להוסיף- אם אין מקום- להקפיץ הודעה
 
+
+                    if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
+                        dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["code"] + "</a>";
+                    else // אם יש מקום בכרטיס המנוי- להקפיץ הודעה  ולהכניס לטבלה של הזמנת חוגים
+                    {
+                        dr[day] = dr[day].ToString() + "</br> <a href=' '>" + row["code"] + "</a>";
+                        
+                    }
+                }
 
             }
             DataView dv = new DataView(ndt);

@@ -61,17 +61,14 @@ namespace GymProject
               
                 if (Session["Type"].Equals("Subscriber"))
                 {
-
-                    // צריך להוסיף- אם אין מקום- להקפיץ הודעה
-
-
-                    if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
-                        dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["code"] + "</a>";
-                    else // אם יש מקום בכרטיס המנוי- להקפיץ הודעה  ולהכניס לטבלה של הזמנת חוגים
-                    {
-                        dr[day] = dr[day].ToString() + "</br> <a href=' '>" + row["code"] + "</a>";
+                   if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
+                        dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["fullName"] + "</a>";
+                   else                 // אם יש מקום בכרטיס המנוי- להקפיץ הודעה  ולהכניס לטבלה של הזמנת חוגים
+                   {
+                         // צריך להוסיף- אם אין מקום- להקפיץ הודעה
+                         dr[day] = dr[day].ToString() + "</br> <a href=' '>" + row["fullName"] + "</a>";
                         
-                    }
+                   }
                 }
 
             }

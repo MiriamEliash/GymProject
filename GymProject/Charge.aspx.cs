@@ -29,10 +29,22 @@ namespace GymProject
              }
              */
         }
-
+        
         protected void Button1_Click(object sender, EventArgs e)// מכניסה לאותו משתמש 
         {
            // cl.newCharge(Session["Id"].ToString(),)
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            if(!cl.checkUser(Session["Id"].ToString()))
+            { 
+            cl.newCharge(Session["Id"].ToString(), 0, Int32.Parse(numClass.text), CardNumber.Text, DateTime.Today);
+            }
+            else
+            {
+                cl.updateCharge(Session["Id"].ToString(), 0, Int32.Parse(numClass.text));
+            }
         }
     }
 }

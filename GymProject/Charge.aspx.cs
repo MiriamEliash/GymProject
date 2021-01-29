@@ -38,12 +38,12 @@ namespace GymProject
         protected void Button1_Click1(object sender, EventArgs e)
         {
             if(!cl.checkUser(Session["Id"].ToString()))
-            { 
-            cl.newCharge(Session["Id"].ToString(), 0, Int32.Parse(numClass.text), CardNumber.Text, DateTime.Today);
-            }
-            else
-            {
-                cl.updateCharge(Session["Id"].ToString(), 0, Int32.Parse(numClass.text));
+             { 
+             cl.newCharge(Session["Id"].ToString(), Int32.Parse(numOfClasses.Text), CardNumber.Text, DateTime.Today);
+             }
+              else
+              {
+            cl.updateCharge(Session["Id"].ToString(), Int32.Parse(numOfClasses.Text));
             }
         }
     }

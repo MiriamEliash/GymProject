@@ -79,19 +79,18 @@
               <asp:Label ID="Label4" class="control-label" runat="server" Text="number of classes"></asp:Label>
 
                   <div class="span4">
-                      <select id="numClass"  class="input-block-level">                       
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                        </select>
-
+                 <asp:DropDownList ID="numOfClasses" runat="server"  AutoPostBack="true"  >
+                     <asp:ListItem Value="1">1</asp:ListItem>
+                     <asp:ListItem Value="2">2</asp:ListItem>
+                     <asp:ListItem Value="3">3</asp:ListItem>
+                     <asp:ListItem Value="4">4</asp:ListItem>
+                     <asp:ListItem Value="5">5</asp:ListItem>
+                     <asp:ListItem Value="6">6</asp:ListItem>
+                     <asp:ListItem Value="7">7</asp:ListItem>
+                     <asp:ListItem Value="8">8</asp:ListItem>
+                     <asp:ListItem Value="9">9</asp:ListItem>
+                     <asp:ListItem Value="10">10</asp:ListItem>
+                </asp:DropDownList>
                                 </div>
 
 

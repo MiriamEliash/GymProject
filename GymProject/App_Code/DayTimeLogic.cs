@@ -61,8 +61,16 @@ namespace GymProject.App_Code
           
             return dal.excuteQuery(sql);
         }
+/*
+        public DataSet show()
+        {
 
+            string sql = "SELECT DayTime.code, DayTime.day1, DayTime.hour1 ,Classes.name ,  Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM (((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON Classes.CodeClass=TeacherClass.CodeClass)INNER JOIN Instructors ON Instructors.ID=TeacherClass.id) ORDER BY hour,day ";
+            //string sql = string.Format(("SELECT DayTime.code, (Classes.name AS nameClass FROM ((Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)),( Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID ) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)), DayTime.day, DayTime.hour   WHERE DayTime.Code={0}"), code);
 
+            return dal.excuteQuery(sql);
+        }
+*/
 
         /* public DataSet getNameByCodeClassTeacher(int CodeClassTeacher)
          {

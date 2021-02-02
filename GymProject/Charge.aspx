@@ -12,7 +12,7 @@
 <div class="container">
   <div class="row">
     <div class="span12">
-      <form class="form-horizontal span6" runat="server">
+      <form class="form-horizontal span8" runat="server">
         <fieldset>
           <legend>Payment</legend>
 
@@ -32,7 +32,7 @@
 
             <div class="controls">
               <div class="row-fluid">
-                <div class="span9">
+                <div class="span3">
                     <select id="Select1" class="input-block-level">
                        <option>01</option>
                       <option>02</option>
@@ -64,6 +64,7 @@
               </div>
             </div>
           </div>
+              </div>
        
           <div class="control-group">
              <asp:Label ID="Label3" class="control-label" runat="server" Text="Card CVV"></asp:Label>
@@ -78,8 +79,8 @@
            <div class="control-group">
               <asp:Label ID="Label4" class="control-label" runat="server" Text="number of classes"></asp:Label>
 
-                  <div class="span4">
-                 <asp:DropDownList ID="numOfClasses" runat="server"  AutoPostBack="true"  >
+                  <div class="span3">
+                 <asp:DropDownList ID="numOfClasses" runat="server"  AutoPostBack="true"  OnSelectedIndexChanged="numOfClasses_SelectedIndexChanged">
                      <asp:ListItem Value="1">1</asp:ListItem>
                      <asp:ListItem Value="2">2</asp:ListItem>
                      <asp:ListItem Value="3">3</asp:ListItem>
@@ -94,14 +95,20 @@
                                 </div>
 
 
-
               </div>
             </div>
           </div>
-       
+          <asp:Label ID="Label6" runat="server" Text=" " Font-Bold="true" Font-Size="Large"></asp:Label>
+
+      </div>
+
+
+
           <div class="form-actions">
             <asp:Button ID="Button1" type="submit" class="btn btn-primary" runat="server" Text="Next" OnClick="Button1_Click1" />
              <a href="Calander.aspx" class="tColor">Back</a>
+              <br />
+              <asp:Label ID="Label5" runat="server" Text="" ForeColor="Red"></asp:Label>
           </div>
         </fieldset>
       </form>

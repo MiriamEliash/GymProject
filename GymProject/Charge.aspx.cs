@@ -36,15 +36,26 @@ namespace GymProject
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
-        {
-            if(!cl.checkUser(Session["Id"].ToString()))
-             { 
+        {// מי שמגיע לפה- חסר לו חוגים במשתמש
+            if(!cl.checkUser(Session["Id"].ToString())) //בודקם אם יש המנוי אי פעם שילם על חוגים- אם אין- מוסיפה חדש
+            { 
              cl.newCharge(Session["Id"].ToString(), Int32.Parse(numOfClasses.Text), CardNumber.Text, DateTime.Today);
-             }
-              else
-              {
-            cl.updateCharge(Session["Id"].ToString(), Int32.Parse(numOfClasses.Text));
+                Label5.Text = "you have successfuly add new classes!";
             }
+              else// אם יש- מעדכנת את מה שיש בטבלה
+              {
+                cl.updateCharge(Session["Id"].ToString(), Int32.Parse(numOfClasses.Text));
+                Label5.Text = "you have successfuly add new classes!";
+
+              }
+        }
+
+
+
+        protected void numOfClasses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int sum = (int)(Int32.Parse(numOfClasses.Text) * 55);
+            Label6.Text = "Toatl :"+sum+ "₪";
         }
     }
 }

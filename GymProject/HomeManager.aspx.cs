@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace GymProject
 {
-    public partial class HomeSubscribers : System.Web.UI.Page
+    public partial class HomeManager : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +18,5 @@ namespace GymProject
         {
             Response.Redirect("Calander.aspx");
         }
-
-
     }
 }

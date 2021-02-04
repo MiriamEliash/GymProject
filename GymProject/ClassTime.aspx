@@ -5,12 +5,19 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<center>
+    <center>
     <form runat="server">
 
         <br />
         
-    
+          <div class="jumbotron p-3 p-md-5 text-black rounded" " style="background-color: beige">
+        <div class="col-md-6 px-0">
+          <h2 class="display-4 font-italic" style="line-height: 41px;">So, what should be done?</h2>
+          <p class="lead my-3">Choose a class, instructor, day, time and that's it, you've done the job!</p>
+            <br />
+
+        </div>
+              </div>
 
     <asp:DropDownList ID="codeClass" runat="server" OnSelectedIndexChanged="codeClass_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
         <br />
@@ -43,6 +50,8 @@
          <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red" ></asp:Label>
         <br />
        <asp:Button ID="Button1"  class="btn btn-sm btn-outline-secondary"  runat="server" Text="save"  OnClick="Button1_Click"></asp:Button>
+        <br />
+         <a href="Classes.aspx" class="tColor">Back</a>
         <br />
         <br />
     </form>

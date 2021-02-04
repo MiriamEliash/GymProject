@@ -41,7 +41,7 @@
         <div class="col-md-6 px-0">
           <h2 class="display-4 font-italic" style="line-height: 41px;">Welcome</h2>
           <p class="lead my-3">to the place that will make you not give up!</p>
-
+            <br />
 
         </div>
        <div> 
@@ -105,7 +105,7 @@
 
     </main><!-- /.container -->
 
-
+      <br />
 
    </form>
 

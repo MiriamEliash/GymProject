@@ -42,7 +42,7 @@ namespace GymProject
 
             foreach (DataRow row in dt.Rows)
             {
-                string value = row["hour"].ToString();
+                string value = row["hour1"].ToString();
                 DateTime timeConvert;
                 DateTime.TryParse(value, out timeConvert);
                 int time;
@@ -55,23 +55,23 @@ namespace GymProject
                     ndt.Rows.Add(dr);
                 }
 
-                string dayValue = row["day"].ToString();
+                string dayValue = row["day1"].ToString();
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
               
-                if (Session["Type"].Equals("Subscriber"))
-                {
-                   if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
+               // if (Session["Type"].Equals("Subscriber"))
+              //  {
+              //     if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
                         dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
-                   else                 // אם יש מקום בכרטיס המנוי- להקפיץ הודעה,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
-                   {
+              //     else                 // אם יש מקום בכרטיס המנוי- להקפיץ הודעה,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
+               //    {
                          // צריך להוסיף- אם אין מקום- להקפיץ הודעה
 
 
-                         dr[day] = dr[day].ToString() + "</br> <a href=' '>" + row["fullName"] + "</a>";
+                //         dr[day] = dr[day].ToString() + "</br> <a href=' '>" + row["fullName"] + "</a>";
                         
-                   }
-                }
+                //   }
+              //  }
 
             }
             DataView dv = new DataView(ndt);

@@ -1,16 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Calander.aspx.cs" Inherits="GymProject.Calanser" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/a71707a89a.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="./style.css"/>
+
+<title>Popup Box</title>
+
 
 <style>
-    table 
-    { 
+ table 
+ { 
        margin: 0px auto; 
       border: 1px solid black;
       border-style:ridge;
       text-align: center;
         height: 600px;
         width: 900px;
-    }
+ }
 th 
 { 
     background-color: beige;
@@ -27,12 +37,12 @@ td
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
+
+
+
+
    <br />
 
-    <asp:Label ID="codeT" runat="server" Text='<%#Eval("1") %>'></asp:Label>
-    <asp:Label ID="day" runat="server" Text='<%#Eval("1") %>'></asp:Label>
-    <asp:Label ID="hour" runat="server"  Text='<%#Eval("8:00") %>'></asp:Label>
-    <asp:Button ID="Button1" runat="server" Text="הבא" CommandName='<%#Eval("code") %>'  OnClick="Button1_Click" />
         
     <asp:Repeater ID="Repeater1" runat="server"></asp:Repeater>
 

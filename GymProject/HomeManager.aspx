@@ -1,5 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="HomeSubscribers.aspx.cs" Inherits="GymProject.HomeSubscribers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="HomeManager.aspx.cs" Inherits="GymProject.HomeManager" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -9,43 +12,46 @@
  <div class="container">
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-4 pt-1" </div>
+          <div class="col-4 pt-1">
+            
+          </div>
  
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
               
             </a>
-       
+            <a class="btn btn-sm btn-outline-secondary" href="Register.aspx">Sign up</a>
           </div>
         </div>
       </header>
 
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between"> 
-          <a class="p-2 text-muted" href="Corona.aspx" spellcheckker="false"
-              style="color: black; background-color:#e2ecef;">Corona regulations</a>
+          <a class="p-2 text-muted" href="Classes.aspx" spellcheckker="false"
+              style="color: black; background-color:#e2ecef;">Classes</a>
           
-          <a class="p-2 text-muted" href="#">List of sports clubs</a>
+          <a class="p-2 text-muted" href="Instructors.aspx">Instructors</a>
        
-          <a class="p-2 text-muted" href="#" spellcheckker="false"
-              style="color: #ccc;background-color:  #e2ecef;">List of devices</a>
+          <a class="p-2 text-muted" href="Subscribers.aspx" spellcheckker="false"
+              style="color: #ccc;background-color:  #e2ecef;">Subscribers</a>
         
-          
+           <a class="p-2 text-muted" href="Device.aspx">Device</a>
         </nav>
       </div>
 
       <div class="jumbotron p-3 p-md-5 text-black rounded" " style="background-color: beige">
         <div class="col-md-6 px-0">
           <h2 class="display-4 font-italic" style="line-height: 41px;">Welcome</h2>
-          <p class="lead my-3">to the place that will make you not give up!</p>
-
+          <p class="lead my-3">Let's start working! </p>
+            <br />
 
         </div>
        <div> 
+      
+         <asp:Button ID="Button1" runat="server" Text="Calander" class="btn btn-sm btn-outline-secondary"  OnClick="Button1_Click"/>
+               
+          </div>
            <br />
-           <asp:Button ID="Button1" runat="server" Text="Clander" class="btn btn-sm btn-outline-secondary"  OnClick="Button1_Click" />
-  </div>
-   <br />
 
       <div class="row mb-2">
         <div class="col-md-6">
@@ -53,29 +59,27 @@
             <div class="card-body d-flex flex-column align-items-start" style="height: 100px; padding-top: 19px; text-decoration-color: rgb(255, 255, 255);">
               
               <h3 class="mb-0">
-                <a class="text-dark" style="padding-top: 0px; margin-top: 0px; min-width: 0px; padding-bottom: 64px; padding-right: 0px; line-height: 2px;">Why sport is important?</a>
+                <a class="text-dark" style="padding-top: 0px; margin-top: 0px; min-width: 0px; padding-bottom: 64px; padding-right: 0px; line-height: 2px;">Why you sould join?</a>
               </h3>
           
-              <p class="card-text mb-auto" style="height: 90px;">Exercise helps prevent many types of diseases, raises concentration and energy and strengthens the body.</p>
+              <p class="card-text mb-auto" style="height: 90px;">THE GYM offers you a variety of sports classes with experienced instructors and range of special facilities.</p>
               
             </div>
-              
-         <img src="Photos/spinning.jpeg"  style="width: 200px; height: 200px;"  data-holder-rendered="true">
+         <img src="Photos/woman.img.jpg"  style="width: 200px; height: 200px;"  data-holder-rendered="true">
           </div>
         </div>
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-             
+              <strong class="d-inline-block mb-2 text-success">So..? Are you ready?</strong>
               <h3 class="mb-0">
-                <a class="text-dark"> Tips to help you not give up</a>
+                <a class="text-dark"> How to join?</a>
               </h3>
-         
-              <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 65px;">Stick to sports three times a week at first.Find a sport that you love and someone who will encourage you. </p>
+             <br />
+              <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 65px;">Click the button above, enter your details and that's it, <u>welcome!</u></p>
               
             </div>
-              
-             <img src="Photos/yoga.jpeg"   data-holder-rendered="true" style="width: 200px; height: 200px;"/>
+             <img src="Photos/together.img.jpg"   data-holder-rendered="true" style="width: 200px; height: 200px;"/>
           </div>
             
         </div>
@@ -103,8 +107,7 @@
 
     </main><!-- /.container -->
 
-
-           <br />
+      <br />
 
    </form>
 

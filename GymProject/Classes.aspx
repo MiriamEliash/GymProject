@@ -8,11 +8,15 @@
     <form runat="server">
         <center>
         
-        <asp:GridView ID="GridView1"  OnRowUpdating="GridView1_RowUpdating" OnRowEditing="GridView1_RowEditing" OnRowCancelingEdit="GridView1_RowCancelingEdit"  runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
+            <br />
+        
+            <br />
+        
+         <asp:GridView ID="GridView1"  OnRowUpdating="GridView1_RowUpdating" OnRowEditing="GridView1_RowEditing" OnRowCancelingEdit="GridView1_RowCancelingEdit"  runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="code class" HeaderText="code class" ReadOnly="True" />
-            <asp:BoundField DataField="name class" HeaderText="name " ReadOnly="True" />
+            <asp:BoundField DataField="CodeClass" HeaderText="code class" ReadOnly="True" />
+            <asp:BoundField DataField="name" HeaderText="name " ReadOnly="True" />
             <asp:BoundField DataField="number of people" HeaderText="number of people" />
             <asp:CommandField ButtonType="Button" HeaderText="Edit" ShowEditButton="True" />
         </Columns>
@@ -30,7 +34,16 @@
 
     </asp:GridView>
             <br />
+
+               <asp:Button ID="Button1" runat="server" Text="Weekly arrangement" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
+
+            <br />
+            <br />
+            <br />
+            <br />
+
             </center>
+
         </form>
 
 </asp:Content>

@@ -29,14 +29,14 @@ namespace GymProject
             DataTable ndt = new DataTable();
             DataRow dr = null; //טבלה חדשה שאנחנו בונים
             int hour = 0;
-            ndt.Columns.Add(new DataColumn("SetHour", typeof(Int32)));
-            ndt.Columns.Add(new DataColumn("Sunday", typeof(Int32)));
-            ndt.Columns.Add(new DataColumn("Monday", typeof(Int32)));
-            ndt.Columns.Add(new DataColumn("Tuesday", typeof(Int32)));
-            ndt.Columns.Add(new DataColumn("Wednesday", typeof(Int32)));
-            ndt.Columns.Add(new DataColumn("Thursday", typeof(Int32)));
-            ndt.Columns.Add(new DataColumn("Friday", typeof(Int32)));
-            ndt.Columns.Add(new DataColumn("Saturday", typeof(Int32)));
+            ndt.Columns.Add(new DataColumn("SetHour", typeof(string)));
+            ndt.Columns.Add(new DataColumn("Sunday", typeof(string)));
+            ndt.Columns.Add(new DataColumn("Monday", typeof(string)));
+            ndt.Columns.Add(new DataColumn("Tuesday", typeof(string)));
+            ndt.Columns.Add(new DataColumn("Wednesday", typeof(string)));
+            ndt.Columns.Add(new DataColumn("Thursday", typeof(string)));
+            ndt.Columns.Add(new DataColumn("Friday", typeof(string)));
+            ndt.Columns.Add(new DataColumn("Saturday", typeof(string)));
 
             int day = 0;
 
@@ -50,7 +50,7 @@ namespace GymProject
                 if (hour != time)
                 {
                     dr = ndt.NewRow();
-                    dr[0] = time;
+                    dr[0] = time+":00";
                     hour = time;
                     ndt.Rows.Add(dr);
                 }

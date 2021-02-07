@@ -37,16 +37,9 @@ td
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
+<br />
 
-
-
-
-   <br />
-
-        
-    <asp:Repeater ID="Repeater1" runat="server"></asp:Repeater>
-
-     <div class="jumbotron p-3 p-md-5 text-black rounded" " style="background-color: beige">
+         <div class="jumbotron p-3 p-md-5 text-black rounded" " style="background-color: beige">
         <div class="col-md-6 px-0">
           <h2 class="display-4 font-italic" style="line-height: 41px;">Welcome</h2>
           <p class="lead my-3">to the place that will make you not give up!</p>
@@ -54,8 +47,10 @@ td
             </div>
         </div>
 
-    <table border="1">
-         <tr>
+   <br />
+
+     <table border="1">
+    <tr>
     <th> </th>
     <th>Sunday </th>
     <th>Monday </th>
@@ -65,67 +60,44 @@ td
     <th>Friday </th>
     <th>Saturday </th>
   </tr>
+  <tr>   
+     
+<asp:Repeater ID="Repeater1" runat="server">
+
+ <ItemTemplate>
+
+
   <tr>
-    <th>8:00</th>
-    <td>שורה 1, תא 1</td>
-    <td>שורה 1, תא 2</td>
-    <td>שורה 1, תא 3</td>
-    <td>שורה 1, תא 4</td>
-    <td>שורה 1, תא 5</td>
-    <td>שורה 1, תא 6</td>
-    <td>שורה 1, תא 7</td>
-  </tr>
-  <tr>
-    <th> 10:00</th>
-    <td>שורה 2, תא 1</td>
-    <td>שורה 2, תא 2</td>
-    <td>שורה 2, תא 3</td>
-    <td>שורה 2, תא 4</td>
-    <td>שורה 2, תא 5</td>
-    <td>שורה 2, תא 6</td>
-    <td>שורה 2, תא 7</td>
-  </tr>
-  <tr>
-    <th>15:00 </th>
-    <td>שורה 3, תא 1</td>
-    <td>שורה 3, תא 2</td>
-    <td>שורה 3, תא 3</td>
-    <td>שורה 3, תא 4</td>
-    <td>שורה 3, תא 5</td>
-    <td>שורה 3, תא 6</td>
-    <td>שורה 3, תא 7</td>
-  </tr>
- <tr>
-    <th>16:00 </th>
-    <td>שורה 4, תא 1</td>
-    <td>שורה 4, תא 2</td>
-    <td>שורה 4, תא 3</td>
-    <td>שורה 4, תא 4</td>
-    <td>שורה 4, תא 5</td>
-    <td>שורה 4, תא 6</td>
-    <td>שורה 4, תא 7</td>
-  </tr>
- <tr>
-    <th>20:00 </th>
-    <td>שורה 5, תא 1</td>
-    <td>שורה 5, תא 2</td>
-    <td>שורה 5, תא 3</td>
-    <td>שורה 5, תא 4</td>
-    <td>שורה 5, תא 5</td>
-    <td>שורה 5, תא 6</td>
-    <td>שורה 5, תא 7</td>
-  </tr>
- <tr>
-    <th>21:00 </th>
-    <td>שורה 6, תא 1</td>
-    <td>שורה 6, תא 2</td>
-    <td>שורה 6, תא 3</td>
-    <td>שורה 6, תא 4</td>
-    <td>שורה 6, תא 5</td>
-    <td>שורה 6, תא 6</td>
-    <td>שורה 6, תא 7</td>
-  </tr>
-</table>
+                                
+     <td class="align-middle"><%# DataBinder.Eval(Container.DataItem, "SetHour") %></td>
+
+     <td >  <%# DataBinder.Eval(Container.DataItem, "Sunday") %>    </td>
+
+     <td> <span ><%# DataBinder.Eval(Container.DataItem, "Monday") %></span></td>
+
+     <td>   <span><%# DataBinder.Eval(Container.DataItem, "Tuesday") %></span> </td>
+
+     <td>   <span ><%# DataBinder.Eval(Container.DataItem, "Wednesday") %></span>  </td>
+
+     <td class="bg-light-gray">   <%# DataBinder.Eval(Container.DataItem, "Thursday") %> </td>
+
+     <td class="bg-light-gray">   <%# DataBinder.Eval(Container.DataItem, "Friday") %> </td>
+
+     <td class="bg-light-gray">   <%# DataBinder.Eval(Container.DataItem, "Saturday") %>   </td>
+
+</tr>
+    
+
+    
+</ItemTemplate>
+
+
+    </asp:Repeater>
+       </table>
+
+    
+
+   
     <br />
     </form>
 </asp:Content>

@@ -232,6 +232,7 @@
     <Compile Include="App_Code\DeviceLogic.cs" />
     <Compile Include="App_Code\InstructorsLogic.cs" />
     <Compile Include="App_Code\ManagerLogic.cs" />
+    <Compile Include="App_Code\OrderClassesLogic.cs" />
     <Compile Include="App_Code\SubscribersLogic.cs" />
     <Compile Include="App_Code\TeacherClassLogic.cs" />
     <Compile Include="Calander.aspx.cs">

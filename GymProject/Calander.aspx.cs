@@ -63,22 +63,21 @@ namespace GymProject
               //  {
               //     if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
                         dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
-              //     else                 // אם יש מקום בכרטיס המנוי- להקפיץ הודעה,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
-               //    {
-                         // צריך להוסיף- אם אין מקום- להקפיץ הודעה
+                //     else                 // אם יש מקום בכרטיס המנוי ,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
+                //    {
+                // צריך להוסיף- אם אין מקום- להקפיץ הודעה (שאילתה מסובכת בוליאן)
+
+                //אם יש מקום- מובילים לעמ אחר עם אישור או ביטול
+                dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx'>" + row["name"] + ' ' + row["fullName"]  + "</a>";
 
 
-                //         dr[day] = dr[day].ToString() + "</br> <a href=' '>" + row["fullName"] + "</a>";
-                        
                 //   }
-              //  }
+                //  }
 
             }
             DataView dv = new DataView(ndt);
             return dv;
         }
-
-
 
 
 

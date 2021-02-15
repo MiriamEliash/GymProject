@@ -43,6 +43,12 @@ namespace GymProject.App_Code
             string sql = string.Format(("UPDATE Charge SET [numTotalClasses]={0},[numUsedClasses]={1},[numUsedClasses]={1} WHERE ID='{2}'"), numTotalClasses, 0, ID);
             dal.excuteQuery(sql);
         }
+        
+        public DataSet whatIdCharge(string id)
+        {
+            string sql = string.Format("SELECT Charge.chargeId  WHERE Charge.UserId='{0}'", id);
+           return dal.excuteQuery(sql);
+        }
 
     }
 }

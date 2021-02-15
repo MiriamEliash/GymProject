@@ -59,21 +59,18 @@ namespace GymProject
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
               
-               // if (Session["Type"].Equals("Subscriber"))
-              //  {
-              //     if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
-                //      dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
-                //     else                 // אם יש מקום בכרטיס המנוי ,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
-                //    {
-                // צריך להוסיף- אם אין מקום- להקפיץ הודעה 
-
-                //אם יש מקום- מובילים לעמ אחר עם אישור או ביטול
-               string s = row["name"] +"*"+ row["fullName"] + "*" + row["day1"] + "*" + row["hour1"];
-               dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx? data="+ s + " '>" + row["name"] + ' ' + row["fullName"]  + "</a>";
-
-
-                //   }
-                //  }
+               if (Session["Type"].Equals("Subscriber"))
+                {
+                  if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
+                    dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
+                    else                 // אם יש מקום בכרטיס המנוי ,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
+                    {
+                             // צריך להוסיף- אם אין מקום- להקפיץ הודעה 
+                          //אם יש מקום- מובילים לעמ אחר עם אישור או ביטול
+                       string s = row["name"] +"*"+ row["fullName"] + "*" + row["day1"] + "*" + row["hour1"] + "*" + row["code"] + row["num"];
+                       dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx? data="+ s + " '>" + row["name"] + ' ' + row["fullName"]  + "</a>";
+                    }
+               }
 
             }
             DataView dv = new DataView(ndt);

@@ -20,16 +20,16 @@ namespace GymProject.App_Code
          }
 
 
-        /*   public bool isOk(int code, int num)
+           public bool isOk(int CodeDayTime, int num)
            {//השיטה תבדוק האם יש נגמר המקום בחוג- מקבלים מספר מקסימלי משאילתה קודמת ומשתמשים
-               if (checkNum(code)+1> num)
+               if (checkNum(CodeDayTime)+1> num)
                {
                    return true;
                }
                else
                    return false;
            }
-           public int checkNum(int code)
+           public int checkNum(int CodeDayTime)
            {//  מקבלת ומחזירה את מספר המשתתפים בחוג הקיים
                string sql = "SELECT COUNT(OrderClasses.) FROM  OrderClasses WHERE  OrderClasses.CodeDayTime={0}", code;
                DataSet ds = dal.excuteQuery(sql);
@@ -37,7 +37,7 @@ namespace GymProject.App_Code
                return s;
            }
 
-   */
+   
 
 
 

@@ -56,18 +56,12 @@ namespace GymProject.App_Code
         public DataSet show() //שאילתה מסובכת- לוקחת את החוגים עם המדרייכם לפי ימים ושעות
         {
 
-            string sql = "SELECT DayTime.code AS code, DayTime.day1, DayTime.hour1 ,Classes.name AS name, Classes.number of people AS totalNum ,  Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM (((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON Classes.CodeClass=TeacherClass.CodeClass)INNER JOIN Instructors ON Instructors.ID=TeacherClass.id) ORDER BY hour1,day1 ";
+            string sql = "SELECT DayTime.code AS code, DayTime.day1, DayTime.hour1 ,Classes.name AS name ,  Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM (((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON Classes.CodeClass=TeacherClass.CodeClass)INNER JOIN Instructors ON Instructors.ID=TeacherClass.id) ORDER BY hour1,day1 ";
             //string sql = string.Format(("SELECT DayTime.code, (Classes.name AS nameClass FROM ((Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)),( Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID ) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)), DayTime.day, DayTime.hour   WHERE DayTime.Code={0}"), code);
           
             return dal.excuteQuery(sql);
         }
 
-      //  public DataSet showToUser(int code) //שאילתה מסובכת- מציגה לפי הקוד את  שם החוג, מדריך, שם ושעה
-      //  {
-
-       //     string sql = "SELECT DayTime.code ,DayTime.codeClassTeacher DayTime.day1, DayTime.hour1 ,Classes.name AS name,  Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM (((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON Classes.CodeClass=TeacherClass.CodeClass)INNER JOIN Instructors ON Instructors.ID=TeacherClass.id) WHERE DayTime.code={0} ",code;
-       //     return dal.excuteQuery(sql);
-      //  }
 
 
         /* public DataSet getNameByCodeClassTeacher(int CodeClassTeacher)

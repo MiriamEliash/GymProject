@@ -62,13 +62,14 @@ namespace GymProject
                // if (Session["Type"].Equals("Subscriber"))
               //  {
               //     if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
-                        dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
+                //      dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
                 //     else                 // אם יש מקום בכרטיס המנוי ,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
                 //    {
-                // צריך להוסיף- אם אין מקום- להקפיץ הודעה (שאילתה מסובכת בוליאן)
+                // צריך להוסיף- אם אין מקום- להקפיץ הודעה 
 
                 //אם יש מקום- מובילים לעמ אחר עם אישור או ביטול
-                dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx'>" + row["name"] + ' ' + row["fullName"]  + "</a>";
+               string s = row["name"] +"*"+ row["fullName"] + "*" + row["day1"] + "*" + row["hour1"];
+               dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx? data="+ s + " '>" + row["name"] + ' ' + row["fullName"]  + "</a>";
 
 
                 //   }
@@ -81,10 +82,10 @@ namespace GymProject
 
 
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            string code = (string)(sender as Button).CommandName;
-            Response.Redirect("Charge.aspx?code=" + code);
-        }
+       // protected void Button1_Click(object sender, EventArgs e)
+       // {
+       //     string code = (string)(sender as Button).CommandName;
+       //     Response.Redirect("Charge.aspx?code=" + code);
+       // }
     }
 }

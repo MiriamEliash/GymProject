@@ -11,25 +11,31 @@ namespace GymProject
     public partial class Save : System.Web.UI.Page
     {
         DayTimeLogic dtl = new DayTimeLogic();
-        string nameClass;
-        string fullName;
-        string day;
-        DateTime hour;
+        string id;
+     
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) //להציג- האם אתה מאשר את החוג שבחרת.
             {
-                Label1.Text = "Instructor is already exist";
-                Label2.Text = "Instructor is already exist";
-                Label3.Text = "Instructor is already exist";
-                Label4.Text = "Instructor is already exist";
+                string s = Request.QueryString["data"];
+                if(!string.IsNullOrEmpty(s))
+                {
+                    string[] arr = s.Split('*'); //כל פעם שיש כוכבית- לשים את מה שהיה לפני בתוך תא
+                    string all = "Do you want to sign up to  " + arr[0] + "  with  " + arr[1] + " at:" + arr[2] + ", " + arr[3];
+                    Label1.Text = all;
+                }
             }
-
-            //אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
-
         }
 
+        protected void Button1_Click(object sender, EventArgs e)  //אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
+        {
+            OrderClassesLogic ul = new OrderClassesLogic();
 
+            //if יש מקום
+            // ul.newUser(First_name.Text, Last_name.Text, input_id.Text, Phone_number.Text, Password1.Text, 1111))
+            //   Label2.Text = "you have successfuly registered!";
+
+        }
     }
 }

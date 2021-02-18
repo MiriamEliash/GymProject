@@ -62,7 +62,7 @@ namespace GymProject
                if (Session["Type"].Equals("Subscriber"))
                 {
                   if (!cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
-                    dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
+                   dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
                     else                 // אם יש מקום בכרטיס המנוי ,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
                     {
                              // צריך להוסיף- אם אין מקום- להקפיץ הודעה 

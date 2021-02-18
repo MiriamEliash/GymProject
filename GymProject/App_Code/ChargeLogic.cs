@@ -44,10 +44,12 @@ namespace GymProject.App_Code
             dal.excuteQuery(sql);
         }
         
-        public DataSet whatIdCharge(string id)
+        public int whatIdCharge(string id)
         {
             string sql = string.Format("SELECT Charge.chargeId  WHERE Charge.UserId='{0}'", id);
-           return dal.excuteQuery(sql);
+            DataSet ds = dal.excuteQuery(sql);
+            int s = Int32.Parse(ds.Tables[0].Rows[0].ItemArray.GetValue(0).ToString());
+            return s;
         }
 
     }

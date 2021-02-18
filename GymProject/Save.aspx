@@ -13,12 +13,13 @@
         <div class="col-md-6 px-0">
         
            <asp:Label ID="Label1" runat="server" Text="" ForeColor="black" ></asp:Label>
-           <asp:Label ID="Label2" runat="server" Text="" ForeColor="black" ></asp:Label>
+       
 
             </div>
         </div>
 
       <br />
+        <asp:Label ID="Label2" runat="server" Text="" ForeColor="black" ></asp:Label>
       <asp:Button ID="Button1" runat="server" Text="Save" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click"/>
             <br />
       <a href="Calander.aspx" class="tColor">Back</a>

@@ -14,7 +14,7 @@ namespace GymProject
         
         DayTimeLogic dtl = new DayTimeLogic();
         ChargeLogic cl = new ChargeLogic();
-        string ChargeId;
+        int ChargeId;
         int CodeDayTime;
 
 
@@ -40,24 +40,25 @@ namespace GymProject
             if (!string.IsNullOrEmpty(Request.QueryString["data"]))
             {
               
-                //if יש מקום
+                
 
                 string s = Request.QueryString["data"];
                 string[] arr = s.Split('*'); //כל פעם שיש כוכבית- לשים את מה שהיה לפני בתוך תא  
 
-           /*   ChargeId = cl.whatIdCharge(Session["Id"].ToString());
-                CodeDayTime = Int32(arr[4]);
-                int NUM = Int32(arr[5]);
-                 if (isOk(CodeDayTime,NUM))
-                  {
+                 ChargeId = cl.whatIdCharge(Session["Id"].ToString());
+                 CodeDayTime = Int32.Parse(arr[4]); //מתוך הקישור שהמשתמש בחר- לוקחים את הקוד
+                 int num = Int32.Parse(arr[5]); // מתוך החוג שהמשתמש בחר- לוקחים את מספר המשתמשים
+                //if יש מקום
+                 if (ul.isOk(CodeDayTime, num)) //השיטה תבדוק האם יש נגמר המקום בחוג- מקבלים מספר מקסימלי משאילתה קודמת ומשתמשים
+                 {
                     Label2.Text = "dont have space in this class";
-                  }
+                 }
                   else
-                   {
-                    // ul.newUser( ChargeId ,CodeDayTime);
+                  {
+                    ul.newUser( ChargeId ,CodeDayTime); // מכניסים לטבלה של החוגים
                     Label2.Text = "you have successfuly registered!";
-                   }
-                */
+                  }
+                
 
 
 

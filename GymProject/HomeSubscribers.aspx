@@ -25,7 +25,7 @@
           <a class="p-2 text-muted" href="Corona.aspx" spellcheckker="false"
               style="color: black; background-color:#e2ecef;">Corona regulations</a>
           
-          <a class="p-2 text-muted" href="#">List of sports clubs</a>
+          <a class="p-2 text-muted" href="SportsClubs.aspx">List of sports clubs</a>
        
           <a class="p-2 text-muted" href="#" spellcheckker="false"
               style="color: #ccc;background-color:  #e2ecef;">List of devices</a>
@@ -43,7 +43,7 @@
         </div>
        <div> 
            <br />
-           <asp:Button ID="Button1" runat="server" Text="Clander" class="btn btn-sm btn-outline-secondary"  OnClick="Button1_Click" />
+           <asp:Button ID="Button1" runat="server" Text="Calander" class="btn btn-sm btn-outline-secondary"  OnClick="Button1_Click" />
   </div>
    <br />
 

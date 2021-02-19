@@ -7,6 +7,10 @@
     <form runat="server">
     <center>
 
+        <br />
+        <br />
+        <br />
+
     <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
@@ -23,6 +27,11 @@
         <SortedDescendingCellStyle BackColor="#D4DFE1" />
         <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         </center>
         </form>
 

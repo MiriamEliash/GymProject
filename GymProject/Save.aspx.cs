@@ -23,10 +23,10 @@ namespace GymProject
         {
             if (!IsPostBack) //להציג- האם אתה מאשר את החוג שבחרת.
             {
-                
-                if(!string.IsNullOrEmpty(Request.QueryString["data"]))
+                string s = Request.QueryString["data"];
+                if (!string.IsNullOrEmpty(s))
                 {
-                    string s = Request.QueryString["data"];
+                    
                     string[] arr = s.Split('*'); //כל פעם שיש כוכבית- לשים את מה שהיה לפני בתוך תא
                     string all = "Do you want to sign up to  " + arr[0] + "  with  " + arr[1] + " at:" + arr[2] + ", " + arr[3];
                     Label1.Text = all;

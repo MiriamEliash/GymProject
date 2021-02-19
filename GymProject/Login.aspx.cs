@@ -26,6 +26,7 @@ namespace GymProject
             {
                 Label1.Text = "you have successfully loggin";
                 Session["Id"] = ID.Text;
+               // Session["nameUser"] = "אורח";
                 Session["typeAdmin"] = "Subscriber";
                 Response.Redirect("HomeSubscribers.aspx");
 
@@ -36,6 +37,7 @@ namespace GymProject
                 {
                     Label1.Text = "you have successfully loggin";
                     Session["Id"] = ID.Text;
+                    // Session["nameUser"] = "אורח";
                     Session["typeAdmin"] = "Instructor";
                     Response.Redirect("HomeSubscribers.aspx");
                 }
@@ -45,6 +47,7 @@ namespace GymProject
                     {
                         Label1.Text = "you have successfully loggin";
                         Session["Id"] = ID.Text;
+                        // Session["nameUser"] = "אורח";
                         Session["typeAdmin"] = "Manager";
                         Response.Redirect("HomeSubscribers.aspx");
                     }

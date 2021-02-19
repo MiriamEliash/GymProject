@@ -13,7 +13,7 @@ namespace GymProject.App_Code
         public bool check(string id)
 
         {//בודקת אם נשאר למנוי חוגים
-            string sql = String.Format("SELECT Charge.ID ,Charge.numUsedClasses, Charge.numTotalClasses FROM Charge WHERE Charge.numUsedClasses = Charge.numTotalClasses WHERE Charge.ID='{0}'", id);
+            string sql = String.Format("SELECT Charge.chargeId , Charge.numUsedClasses, Charge.numTotalClasses FROM Charge WHERE Charge.numUsedClasses = Charge.numTotalClasses AND Charge.UserId='{0}'", id);
             return dal.excuteQuery(sql).Tables[0].Rows.Count != 0;
         }
 

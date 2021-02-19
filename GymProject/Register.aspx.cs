@@ -25,6 +25,9 @@ namespace GymProject
             else
             {
                 Label2.Text = "you have successfuly registered!";
+                Session["Id"] = input_id.Text;
+                Session["nameUser"] = First_name.Text+" "+ Last_name.Text;
+                Session["typeAdmin"] = "Instructor";
                 Response.Redirect("HomeSubscribers.aspx");
             }
                

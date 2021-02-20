@@ -62,5 +62,13 @@ namespace GymProject.App_Code
              return dal.excuteQuery(sql);
         }
 
+        public string getInstructorName(string ID)
+        {//מחזירה את השם לפי ת"ז
+            string sql = string.Format("SELECT [First name] FROM Instructors WHERE Instructors.ID ='{0}'", ID);
+            DataSet ds = dal.excuteQuery(sql);
+            string s = ds.Tables[0].Rows[0].ItemArray.GetValue(0).ToString();
+            return s;
+        }
+
     }
 }

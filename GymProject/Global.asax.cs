@@ -21,7 +21,7 @@ namespace GymProject
             {
                 Application["countVisits"] = (int)(Application["countVisits"]) + 1;
                 Session["Id"] = null;
-                Session["nameUser"] = "אורח";
+                Session["nameUser"] = " ";
                 Session["Type"] = "no";
             }
             Application.UnLock();

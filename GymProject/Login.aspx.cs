@@ -26,8 +26,8 @@ namespace GymProject
             {
                 Label1.Text = "you have successfully loggin";
                 Session["Id"] = ID.Text;
-               // Session["nameUser"] = "אורח";
-                Session["typeAdmin"] = "Subscriber";
+                Session["nameUser"] = sl.getUserName(Session["Id"].ToString());
+                Session["Type"] = "Subscriber";
                 Response.Redirect("HomeSubscribers.aspx");
 
             }
@@ -37,8 +37,8 @@ namespace GymProject
                 {
                     Label1.Text = "you have successfully loggin";
                     Session["Id"] = ID.Text;
-                    // Session["nameUser"] = "אורח";
-                    Session["typeAdmin"] = "Instructor";
+                     Session["nameUser"] = il.getInstructorName(Session["Id"].ToString());
+                    Session["Type"] = "Instructor";
                     Response.Redirect("HomeSubscribers.aspx");
                 }
                 else
@@ -47,8 +47,8 @@ namespace GymProject
                     {
                         Label1.Text = "you have successfully loggin";
                         Session["Id"] = ID.Text;
-                        // Session["nameUser"] = "אורח";
-                        Session["typeAdmin"] = "Manager";
+                        Session["nameUser"] = ml.getManagerName(Session["Id"].ToString());
+                        Session["Type"] = "Manager";
                         Response.Redirect("HomeSubscribers.aspx");
                     }
                     else

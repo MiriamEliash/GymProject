@@ -29,6 +29,8 @@
        
           <a class="p-2 text-muted" href="#" spellcheckker="false"
               style="color: #ccc;background-color:  #e2ecef;">List of devices</a>
+
+            <a class="p-2 text-muted" href="CalanderOfClasses.aspx">Calander</a>
         
           
         </nav>

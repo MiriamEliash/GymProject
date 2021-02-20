@@ -57,5 +57,13 @@ namespace GymProject.App_Code
             string sql = string.Format(("DELETE * FROM Subscribers WHERE ID='{0}'"), ID);
             dal.excuteQuery(sql);
         }
+
+        public string getUserName(string ID)
+        {//מחזירה את השם לפי ת"ז
+            string sql = string.Format("SELECT [First name] FROM Subscribers WHERE Subscribers.ID ='{0}'", ID);
+            DataSet ds = dal.excuteQuery(sql);
+            string s = ds.Tables[0].Rows[0].ItemArray.GetValue(0).ToString();
+            return s;
+        }
     }
 }

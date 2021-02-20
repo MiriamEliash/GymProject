@@ -72,7 +72,7 @@
     <Content Include="AddDevice.aspx" />
     <Content Include="AddInstructor.aspx" />
     <Content Include="App_Data\Gym.accdb" />
-    <Content Include="Calander.aspx" />
+    <Content Include="CalanderOfClasses.aspx" />
     <Content Include="Charge.aspx" />
     <Content Include="Classes.aspx" />
     <Content Include="ClassTime.aspx" />
@@ -90,6 +90,7 @@
     <Content Include="HomeSubscribers.aspx" />
     <Content Include="Instructors.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Photos\logo2.img.jpg" />
     <Content Include="Photos\spinning.jpeg" />
     <Content Include="Photos\together.img.jpg" />
@@ -236,12 +237,12 @@
     <Compile Include="App_Code\OrderClassesLogic.cs" />
     <Compile Include="App_Code\SubscribersLogic.cs" />
     <Compile Include="App_Code\TeacherClassLogic.cs" />
-    <Compile Include="Calander.aspx.cs">
-      <DependentUpon>Calander.aspx</DependentUpon>
+    <Compile Include="CalanderOfClasses.aspx.cs">
+      <DependentUpon>CalanderOfClasses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Calander.aspx.designer.cs">
-      <DependentUpon>Calander.aspx</DependentUpon>
+    <Compile Include="CalanderOfClasses.aspx.designer.cs">
+      <DependentUpon>CalanderOfClasses.aspx</DependentUpon>
     </Compile>
     <Compile Include="Charge.aspx.cs">
       <DependentUpon>Charge.aspx</DependentUpon>
@@ -315,6 +316,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

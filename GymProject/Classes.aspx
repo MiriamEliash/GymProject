@@ -34,6 +34,8 @@
 
     </asp:GridView>
             <br />
+          <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
+            <br />
 
                <asp:Button ID="Button1" runat="server" Text="Weekly arrangement" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
 

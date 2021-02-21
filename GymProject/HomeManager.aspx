@@ -20,7 +20,7 @@
             <a class="text-muted" href="#">
               
             </a>
-            <a class="btn btn-sm btn-outline-secondary" href="Register.aspx">Sign up</a>
+        
           </div>
         </div>
       </header>
@@ -36,6 +36,9 @@
               style="color: #ccc;background-color:  #e2ecef;">Subscribers</a>
         
            <a class="p-2 text-muted" href="Device.aspx">Device</a>
+
+                      <a class="p-2 text-muted" href=".aspx" spellcheckker="false"
+              style="color: #ccc;background-color:  #e2ecef;">Calander</a>
         </nav>
       </div>
 
@@ -71,12 +74,12 @@
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-success">So..? Are you ready?</strong>
+              <p class="d-inline-block mb-2 text-success">So..? Are you ready?</p>
               <h3 class="mb-0">
-                <a class="text-dark"> How to join?</a>
+                <p class="text-dark"> How to join?</p>
               </h3>
              <br />
-              <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 65px;">Click the button above, enter your details and that's it, <u>welcome!</u></p>
+              <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 50px;">Click the button above, enter your details and that's it, <u>welcome!</u></p>
               
             </div>
              <img src="Photos/together.img.jpg"   data-holder-rendered="true" style="width: 200px; height: 200px;"/>

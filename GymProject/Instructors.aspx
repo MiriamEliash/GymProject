@@ -34,7 +34,8 @@
         
 
     </asp:GridView>
-
+         <br />
+<asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
          <br />
           <asp:Button ID="Button1" runat="server" Text="New instructor" OnClick="Button1_Click" />
          <br />

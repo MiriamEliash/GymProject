@@ -32,17 +32,14 @@
 
           <div class="col-4 text-center">
              <h1 class="display-4 font-italic" style="line-height: 41px;">THE GYM</h1>
-               
-              <a> <%Response.Write(" שלום " +Session["nameUser"] ); %> </a>
              <br />
+              <a> <%Response.Write(" שלום " +Session["nameUser"] ); %> </a><br />
            <a> <% if (!Session["nameUser"].Equals(" "))
-                  { 
-                      
-                     %><a href="Logout.aspx">התנתקות</a><%
-                  } %>
-
-          </a>
-              <br />
+                  {
+                       
+                       %><a href="Logout.aspx">התנתקות</a><%
+                  } %></a>
+              
           </div>
 
           <div class="col-4 d-flex justify-content-end align-items-center"> </div>

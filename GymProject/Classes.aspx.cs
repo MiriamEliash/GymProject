@@ -22,18 +22,18 @@ namespace GymProject
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-           // try
-           // {
+            try
+            {
                 string numPeople = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[2].Controls[0])).Text;
                 dl.updateClass(int.Parse(numPeople), Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text));
                 GridView1.EditIndex = -1;
                 GridView1.DataSource = dl.getAllClasses();
                 GridView1.DataBind();
-           // }
-          //  catch( Exception e)
-          //  {
-          //      Label1.Text = "שגיאה, יש לנסות מאוחר יותר";
-           // }
+            }
+            catch( Exception ex)
+            {
+                Label1.Text = "שגיאה, יש לנסות מאוחר יותר";
+            }
         
         }
 
@@ -46,7 +46,9 @@ namespace GymProject
 
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
-
+            GridView1.EditIndex = -1;
+            GridView1.DataSource = dl.getAllClasses();
+            GridView1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

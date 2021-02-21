@@ -50,11 +50,19 @@ namespace GymProject
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            string Salary = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[4].Controls[0])).Text;
-            dl.updateInstructor(Double.Parse(Salary),  GridView1.Rows[e.RowIndex].Cells[2].Text);
-            GridView1.EditIndex = -1;
-            GridView1.DataSource = dl.getAllInstructors();
-            GridView1.DataBind();
+            try
+            {
+                string Salary = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[4].Controls[0])).Text;
+                dl.updateInstructor(Double.Parse(Salary), GridView1.Rows[e.RowIndex].Cells[2].Text);
+                GridView1.EditIndex = -1;
+                GridView1.DataSource = dl.getAllInstructors();
+                GridView1.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Label1.Text = "שגיאה, יש לנסות מאוחר יותר";
+            }
+
         }
     }
 }

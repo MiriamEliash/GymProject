@@ -33,8 +33,9 @@
         <SortedDescendingCellStyle BackColor="#D4DFE1" />
         <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
-
-            <br />
+         <br />
+<asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
+         <br />   
 
     <asp:Button ID="Button1" runat="server" Text="New device" OnClick="Button1_Click"/>
 

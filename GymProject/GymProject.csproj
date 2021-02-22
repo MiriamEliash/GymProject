@@ -91,6 +91,8 @@
     <Content Include="Instructors.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Photos\clock.jpg" />
+    <Content Include="Photos\gym.jpg" />
     <Content Include="Photos\logo2.img.jpg" />
     <Content Include="Photos\spinning.jpeg" />
     <Content Include="Photos\together.img.jpg" />

@@ -18,5 +18,10 @@ namespace GymProject
         {
             Response.Redirect("Calander.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

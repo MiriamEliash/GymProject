@@ -58,13 +58,13 @@
                             <div class="card-body d-flex flex-column align-items-start" style="height: 100px; padding-top: 19px; text-decoration-color: rgb(255, 255, 255);">
 
                                 <h3 class="mb-0">
-                                    <a class="text-dark" style="padding-top:0% ; margin-top:15%; min-width: 0px; padding-bottom: 64px; padding-right: 0px;">Why you sould join?</a>
+                                    <a class="text-dark" style="padding-top:0% ; margin-top:15%; min-width: 0px; padding-bottom: 64px; padding-right: 0px;">Good manager is..?</a>
                                 </h3>
 
-                                <p class="card-text mb-auto" style="height: 90px; margin-top:10%">THE GYM offers you a variety of sports classes with experienced instructors and range of special facilities.</p>
+                                <p class="card-text mb-auto" style="height: 90px; margin-top:5%">A soft person who knew how to accommodate the employees, consider their needs, had creative thinking outside the box and one who knew how to get the best out of the employees.</p>
 
                             </div>
-                            <img src="Photos/woman.img.jpg" style="width: 200px; height: 200px;" data-holder-rendered="true">
+                            <img src="Photos/clock.jpg" style="width: 200px; height: 200px;" data-holder-rendered="true">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -72,13 +72,13 @@
                             <div class="card-body d-flex flex-column align-items-start">
                                 <p class="d-inline-block mb-2 text-success">So..? Are you ready?</p>
                                 <h3 class="mb-0">
-                                    <p class="text-dark">How to join?</p>
+                                    <p class="text-dark">What's new lately?</p>
                                 </h3>
                                 
-                                <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 50px;">Click the button above, enter your details and that's it, <u>welcome!</u></p>
-
+                                <p class="card-text mb-auto" style="margin-bottom: 64px; padding-bottom: 0px; height: 50px;">Click the button below..</p>
+                                <asp:Button ID="Button2" class="btn btn-sm btn-outline-secondary" runat="server" Text="Site Uses" OnClick="Button2_Click" />
                             </div>
-                            <img src="Photos/together.img.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;" />
+                            <img src="Photos/gym.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;" />
                         </div>
 
                     </div>
@@ -88,41 +88,16 @@
         </div>
 
 
-        <div class="row">
+       
 
-            <div class="col-1"></div>
-            <div class="col-5 sStyle">
-                <div class="p-3 mb-3 bg-light rounded" style="background-color: rgb(206, 199, 199); height: 200px; margin-right: 0px;">
-                    <h4 class="font-italic">Where?</h4>
-                    <p class="mb-0">
-                        You can find us in Tel Aviv,
-                        <br />
-                        Menachem Begin 53.
-                        <br />
-                        Also, you can look at our instegram page and facebok.<br>
-                    </p>
 
-                </div>
-            </div>
-           
 
-             <div class="col-5 sStyle">
-                <div class="p-3 mb-3 bg-light rounded" style="background-color: rgb(206, 199, 199); height: 200px; margin-right: 0px;">
-                    <h4 class="font-italic">Where?</h4>
-                    <p class="mb-0">
-                        You can find us in Tel Aviv,
-                        <br />
-                        Menachem Begin 53.
-                        <br />
-                        Also, you can look at our instegram page and facebok.<br>
-                    </p>
 
-                </div>
-            </div>
+        <br />
+        <br />
 
-            <div class="col-1"></div>
 
-        </div>
+       
 
 
 

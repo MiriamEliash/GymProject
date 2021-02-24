@@ -22,12 +22,12 @@
                 <div class="nav-scroller py-1 mb-2">
                     <nav class="nav d-flex justify-content-between">
                         <a class="p-2 text-muted" href="Corona.aspx" spellcheckker="false"
-                            style="color: black; background-color: #e2ecef;">Corona regulations</a>
+                            style="color: black; background-color: ghostwhite;">Corona regulations</a>
 
                         <a class="p-2 text-muted" href="SportsClubs.aspx">List of sports clubs</a>
 
                         <a class="p-2 text-muted" href="#" spellcheckker="false"
-                            style="color: #ccc; background-color: #e2ecef;">List of devices</a>
+                            style="color: #ccc; background-color: ghostwhite;">List of devices</a>
 
 
                     </nav>
@@ -107,7 +107,7 @@
             <div class="col-5 sStyle">
                 <div class="p-3 mb-3 bg-light rounded" style="background-color: rgb(206, 199, 199); height: 200px; margin-right: 0px;">
                     <h4 class="font-italic">About us</h4>
-                    <p class="mb-0">
+                    <p class="mb-0 sStyle">
                         The gym has been open since 1999.
                         <br />
                         Since opening the place is full of experienced instructors, a variety of classes and satisfied trainees.

@@ -23,17 +23,17 @@
             <div class="nav-scroller py-1 mb-2">
                 <nav class="nav d-flex justify-content-between">
                     <a class="p-2 text-muted" href="Classes.aspx" spellcheckker="false"
-                        style="color: black; background-color: #e2ecef;">Classes</a>
+                        style="color: black; background-color: ghostwhite;">Classes</a>
 
                     <a class="p-2 text-muted" href="Instructors.aspx">Instructors</a>
 
                     <a class="p-2 text-muted" href="Subscribers.aspx" spellcheckker="false"
-                        style="color: #ccc; background-color: #e2ecef;">Subscribers</a>
+                        style="color: #ccc; background-color:ghostwhite;">Subscribers</a>
 
                     <a class="p-2 text-muted" href="Device.aspx">Device</a>
 
                     <a class="p-2 text-muted" href=".aspx" spellcheckker="false"
-                        style="color: #ccc; background-color: #e2ecef;">Calander</a>
+                        style="color: #ccc; background-color: ghostwhite;">Calander</a>
                 </nav>
             </div>
         </div>

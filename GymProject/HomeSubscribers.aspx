@@ -21,12 +21,12 @@
                 <div class="nav-scroller py-1 mb-2">
                     <nav class="nav d-flex justify-content-between">
                         <a class="p-2 text-muted" href="Corona.aspx" spellcheckker="false"
-                            style="color: black; background-color: #e2ecef;">Corona regulations</a>
+                            style="color: black; background-color: ghostwhite;">Corona regulations</a>
 
                         <a class="p-2 text-muted" href="SportsClubs.aspx">List of sports clubs</a>
 
                         <a class="p-2 text-muted" href="#" spellcheckker="false"
-                            style="color: #ccc; background-color: #e2ecef;">List of devices</a>
+                            style="color: #ccc; background-color:ghostwhite ;">List of devices</a>
 
                         <a class="p-2 text-muted" href="CalanderOfClasses.aspx">Calander</a>
 

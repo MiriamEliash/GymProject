@@ -203,6 +203,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="SportsClubs.aspx" />
     <Content Include="Subscribers.aspx" />
+    <Content Include="UserClasses.aspx" />
     <Content Include="UsersGraph.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -364,6 +365,13 @@
     </Compile>
     <Compile Include="Subscribers.aspx.designer.cs">
       <DependentUpon>Subscribers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserClasses.aspx.cs">
+      <DependentUpon>UserClasses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserClasses.aspx.designer.cs">
+      <DependentUpon>UserClasses.aspx</DependentUpon>
     </Compile>
     <Compile Include="UsersGraph.aspx.cs">
       <DependentUpon>UsersGraph.aspx</DependentUpon>

@@ -46,7 +46,7 @@ namespace GymProject.App_Code
         
         public int whatIdCharge(string id)
         {
-            string sql = string.Format("SELECT Charge.chargeId  WHERE Charge.UserId='{0}'", id);
+            string sql = string.Format("SELECT Charge.chargeId FROM Charge WHERE Charge.UserId='{0}'", id);
             DataSet ds = dal.excuteQuery(sql);
             int s = Int32.Parse(ds.Tables[0].Rows[0].ItemArray.GetValue(0).ToString());
             return s;

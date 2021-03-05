@@ -25,7 +25,9 @@
 </style>
 </head>
 <body>
+    
        <header class="blog-header py-3">
+         
         <div class="row flex-nowrap justify-content-between align-items-center">
 
           <div class="col-4 pt-1"> </div>
@@ -33,12 +35,13 @@
           <div class="col-4 text-center">
              <h1 class="display-4 font-italic" style="line-height: 41px;">THE GYM</h1>
              <br />
-              <a> <%Response.Write(" שלום " +Session["nameUser"] ); %> </a><br />
+              <a> <%Response.Write(" Hello " +Session["nameUser"] ); %> </a><br />
            <a> <% if (!Session["nameUser"].Equals(" "))
                   {
-                       
-                       %><a href="Logout.aspx">התנתקות</a><%
-                  } %></a>
+                      
+                       %><a href="Logout.aspx">Log Out</a><%
+                  } 
+          %></a>
               
           </div>
 

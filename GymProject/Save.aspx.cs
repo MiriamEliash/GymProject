@@ -28,7 +28,7 @@ namespace GymProject
                 {
                     
                     string[] arr = s.Split('*'); //כל פעם שיש כוכבית- לשים את מה שהיה לפני בתוך תא
-                    string all = "Do you want to sign up to  " + arr[0] + "  with  " + arr[1] + " at:" + arr[2] + ", " + arr[3];
+                    string all = "Do you want to sign up to  " + arr[0] + "  with  " + arr[1] + " at:" + arr[2] + ", " + arr[3] +":00  ?";
                     Label1.Text = all;
                 }
             }
@@ -36,14 +36,12 @@ namespace GymProject
 
         protected void Button1_Click(object sender, EventArgs e)  //אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
         {
-           
-            if (!string.IsNullOrEmpty(Request.QueryString["data"]))
+            string m = Request.QueryString["data"];
+            if (!string.IsNullOrEmpty(m))
             {
-              
-                
 
-                string s = Request.QueryString["data"];
-                string[] arr = s.Split('*'); //כל פעם שיש כוכבית- לשים את מה שהיה לפני בתוך תא  
+               
+                string[] arr = m.Split('*'); //כל פעם שיש כוכבית- לשים את מה שהיה לפני בתוך תא  
 
                  ChargeId = cl.whatIdCharge(Session["Id"].ToString());
                  CodeDayTime = Int32.Parse(arr[4]); //מתוך הקישור שהמשתמש בחר- לוקחים את הקוד

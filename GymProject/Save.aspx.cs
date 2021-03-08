@@ -55,7 +55,8 @@ namespace GymProject
                   {
                     ul.newUser( ChargeId ,CodeDayTime); // מכניסים לטבלה של החוגים
                     Label2.Text = "you have successfuly registered!";
-                  }
+                    Response.Redirect("CalanderOfClasses.aspx");
+                }
                 
 
 

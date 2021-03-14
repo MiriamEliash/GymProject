@@ -59,8 +59,8 @@ namespace GymProject
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
               
-             if (Session["Type"].Equals("Subscriber"))
-             {
+                if (Session["Type"].Equals("Subscriber"))//אם משתמש
+                {
                   if (cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
                    dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
                     else                 // אם יש מקום בכרטיס המנוי ,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
@@ -70,7 +70,25 @@ namespace GymProject
                        string s = row["name"] +"*"+ row["fullName"] + "*" + day + "*" + hour + "*" + row["code"] + "*" + row["num"];
                        dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data="+ s + "'>" + row["name"] + ' ' + row["fullName"]  + "</a>";
                     }
-             }
+                }
+                /*   else
+                   {
+                       if (Session["Type"].Equals("Manager"))//אם מהל- רשימת משתמשים באותו החוג וגם אפשרות למחיקת החוג
+                       {
+                      //נותן למנהל רשימה של משתמשים באותו החוג 
+                          string s =  row["code"];
+                          dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
+                           else
+                           {
+                               if (Session["Type"].Equals("Instructor"))//אם מדריך- רק רשימת המשתמשים באותו החוג
+                               {
+                                   //  string s =  row["code"];
+                                   //  dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
+                               }
+                           }
+                       }
+                   }*/
+
 
             }
             DataView dv = new DataView(ndt);

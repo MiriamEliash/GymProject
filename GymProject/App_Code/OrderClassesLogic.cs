@@ -46,14 +46,12 @@ namespace GymProject.App_Code
 
             return dal.excuteQuery(sql);
         }
-       /*   public DataSet showName(string UserId,int day, DateTime hour, int codeClass) //מקבלת קוד חוג (מתוך שאילתה של חוגים)ומציגה את האנשים שנמצאים באותו החוג
+          public DataSet showNames(int codeDayTime) //מקבלת קוד חוג (מתוך שאילתה מסובכת)ומציגה את האנשים שנמצאים באותו החוג
           {
-               int x=
-               string sql = string.Format("SELECT OrderClasses.CodeDayTime,OrderClasses.chargeId DayTime.code, Charge.chargeId , Charge.UserId , Subscribers.ID AS ID, Subscribers.[First name]+' '+Subscribers.[Last name] as fullName FROM ((((OrderClasses INNER JOIN Charge ON  OrderClasses.chargeId =Charge.chargeId) INNER JOIN Subscribers ON Subscribers.ID=Charge.UserId)INNER JOIN DayTime ON DayTime.code=OrderClasses.CodeDayTime) WHERE OrderClasses.CodeDayTime={0} and Subscribers.ID={1}", x, UserId));
-               //string sql = string.Format(("SELECT DayTime.code, (Classes.name AS nameClass FROM ((Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)),( Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID ) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)), DayTime.day, DayTime.hour   WHERE DayTime.Code={0}"), code);
-
+               string sql = string.Format("SELECT OrderClasses.CodeDayTime,OrderClasses.chargeId DayTime.code, Charge.chargeId , Charge.UserId , Subscribers.ID AS ID, Subscribers.[First name],Subscribers.[Last name] FROM ((((OrderClasses INNER JOIN Charge ON  OrderClasses.chargeId =Charge.chargeId) INNER JOIN Subscribers ON Subscribers.ID=Charge.UserId)INNER JOIN DayTime ON DayTime.code=OrderClasses.CodeDayTime) WHERE OrderClasses.CodeDayTime={0} ", codeDayTime);
                return dal.excuteQuery(sql);
           }
+        /*
           public int codeDayTime(int day, DateTime hour, int codeClass, string InstructorId)//שאילתה שמוצאת למנהל את הקוד של אותו חוג עם המדריך, היום והשעה
           {
               string sql = string.Format("SELECT COUNT(OrderClasses.Code) FROM OrderClasses WHERE OrderClasses.CodeDayTime={0}", CodeDayTime);

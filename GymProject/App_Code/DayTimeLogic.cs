@@ -62,7 +62,7 @@ namespace GymProject.App_Code
             return dal.excuteQuery(sql);
         }
 
-       /* public int codeDayTime(int day, DateTime hour, int codeClass, string InstructorId)//שאילתה שמוצאת למנהל את הקוד של אותו חוג עם המדריך, היום והשעה
+       /* public int getNames(int day, DateTime hour, int codeClass, string InstructorId)//שאילתה שמוצאת למנהל את הקוד של אותו חוג עם המדריך, היום והשעה
         {
             string sql = string.Format("SELECT DayTime.code, DayTime.codeClassTeacher ,DayTime.day1, DayTime.hour1,TeacherClass.Code, TeacherClass.CodeClass,TeacherClass.id FROM(DayTime INNER JOIN TeacherClass ON DayTime.codeClassTeacher=TeacherClass.Code WHERE DayTime.day1={0} AND DayTime.hour1={1} AND DayTime.TeacherClass.CodeClass={2} AND TeacherClass.id={3}", day, hour, codeClass, InstructorId);
             DataSet ds = dal.excuteQuery(sql);

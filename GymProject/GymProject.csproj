@@ -89,9 +89,11 @@
     <Content Include="Home.aspx" />
     <Content Include="HomeManager.aspx" />
     <Content Include="HomeSubscribers.aspx" />
+    <Content Include="InstructorList.aspx" />
     <Content Include="Instructors.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="ManagerCalander.aspx" />
     <Content Include="Photos\clock.jpg" />
     <Content Include="Photos\evryone.jpg" />
     <Content Include="Photos\gym.jpg" />
@@ -309,6 +311,13 @@
     <Compile Include="HomeSubscribers.aspx.designer.cs">
       <DependentUpon>HomeSubscribers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InstructorList.aspx.cs">
+      <DependentUpon>InstructorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InstructorList.aspx.designer.cs">
+      <DependentUpon>InstructorList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Instructors.aspx.cs">
       <DependentUpon>Instructors.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -329,6 +338,13 @@
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerCalander.aspx.cs">
+      <DependentUpon>ManagerCalander.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerCalander.aspx.designer.cs">
+      <DependentUpon>ManagerCalander.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="InstructorList.aspx.cs" Inherits="GymProject.InstructorList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ManagerList.aspx.cs" Inherits="GymProject.ManagerLisht" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form runat="server">
+
+     <form runat="server">
         <center>
             <br />
 <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
             <br />
-
      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="500px" CellPadding="3"  BorderStyle="None" BorderWidth="1px"  Height="500px" BackColor="White" BorderColor="#CCCCCC">
          <Columns>
              <asp:BoundField DataField="[First name]" HeaderText="First Name" />

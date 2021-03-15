@@ -232,14 +232,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <div class="cart-wrap">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="cart-totals">
-                        <h3 style="text-align:center">סיכום</h3>
+                        <h3 style="text-align: center">סיכום</h3>
                         <fo rm action="#" method="get" accept-charset="utf-8">
                             <table>
                                 <tbody>
@@ -303,7 +303,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-md-2 ">    </div>
+                                    <div class="col-md-2 "></div>
                                 </div>
                             </ItemTemplate>
                         </asp:Repeater>

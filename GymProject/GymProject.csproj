@@ -93,7 +93,7 @@
     <Content Include="Instructors.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
-    <Content Include="ManagerCalander.aspx" />
+    <Content Include="ManagerList.aspx" />
     <Content Include="Photos\clock.jpg" />
     <Content Include="Photos\evryone.jpg" />
     <Content Include="Photos\gym.jpg" />
@@ -339,12 +339,12 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManagerCalander.aspx.cs">
-      <DependentUpon>ManagerCalander.aspx</DependentUpon>
+    <Compile Include="ManagerList.aspx.cs">
+      <DependentUpon>ManagerList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManagerCalander.aspx.designer.cs">
-      <DependentUpon>ManagerCalander.aspx</DependentUpon>
+    <Compile Include="ManagerList.aspx.designer.cs">
+      <DependentUpon>ManagerList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

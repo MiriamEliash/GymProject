@@ -17,14 +17,28 @@ namespace GymProject
         {
             if (!IsPostBack)
             {
-               Repeater1.DataSource = CreateDataSource();
+                Repeater1.DataSource = CreateDataSource();
                 Repeater1.DataBind();
             }
         }
         public DataView CreateDataSource()
         {
-            DataSet ds = dtl.show(); 
+            DataSet ds = null;
+            if (Session["Type"].Equals("Subscriber") || Session["Type"].Equals("Manager"))// אם משתמש או מנהל
+            {
+                ds = dtl.show();
+
+            }
+            /* else
+             {
+                 if (Session["Type"].Equals("Instructor"))// אם מדריך- שאילתה שמציגה את החוגים שלו
+                 {
+                      ds = dtl.();
+
+                 }
+             }*/
             DataTable dt = ds.Tables[0]; //הטבלה שקיבלנו
+
             // Create sample data for the DataList control.
             DataTable ndt = new DataTable();
             DataRow dr = null; //טבלה חדשה שאנחנו בונים
@@ -50,7 +64,7 @@ namespace GymProject
                 if (hour != time)
                 {
                     dr = ndt.NewRow();
-                    dr[0] = time+":00";
+                    dr[0] = time + ":00";
                     hour = time;
                     ndt.Rows.Add(dr);
                 }
@@ -58,36 +72,36 @@ namespace GymProject
                 string dayValue = row["day1"].ToString();
                 day = Int32.Parse(dayValue);
                 // string s = s + "what i get from query";
-              
+
                 if (Session["Type"].Equals("Subscriber"))//אם משתמש
                 {
-                  if (cl.check(Session["Id"].ToString() )) //אם אין מספיק חוגים במנוי
-                   dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] +' '+ row["fullName"] + "</a>";
+                    if (cl.check(Session["Id"].ToString())) //אם אין מספיק חוגים במנוי
+                        dr[day] = dr[day].ToString() + "</br> <a href='Charge.aspx'>" + row["name"] + ' ' + row["fullName"] + "</a>";
                     else                 // אם יש מקום בכרטיס המנוי ,אם מאשר- להכניס לטבלה של הזמנת חוגים ולעדכן את מספר החוגים המשומשים
                     {
-                             // צריך להוסיף- אם אין מקום- להקפיץ הודעה - בעמ הבא 
-                          //אם יש מקום- מובילים לעמ אחר עם אישור או ביטול
-                       string s = row["name"] +"*"+ row["fullName"] + "*" + day + "*" + hour + "*" + row["code"] + "*" + row["num"];
-                       dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data="+ s + "'>" + row["name"] + ' ' + row["fullName"]  + "</a>";
+                        // צריך להוסיף- אם אין מקום- להקפיץ הודעה - בעמ הבא 
+                        //אם יש מקום- מובילים לעמ אחר עם אישור או ביטול
+                        string s = row["name"] + "*" + row["fullName"] + "*" + day + "*" + hour + "*" + row["code"] + "*" + row["num"];
+                        dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
                     }
                 }
-                /*   else
-                   {
-                       if (Session["Type"].Equals("Manager"))//אם מהל- רשימת משתמשים באותו החוג וגם אפשרות למחיקת החוג
-                       {
-                      //נותן למנהל רשימה של משתמשים באותו החוג 
-                          string s =  row["code"];
-                          dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
-                           else
-                           {
-                               if (Session["Type"].Equals("Instructor"))//אם מדריך- רק רשימת המשתמשים באותו החוג
-                               {
-                                   //  string s =  row["code"];
-                                   //  dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
-                               }
-                           }
-                       }
-                   }*/
+                else
+                {
+                    string s = row["name"] + "*" + row["fullName"] + "*" + day + "*" + hour + "*" + row["code"] + "*" + row["num"];
+                    if (Session["Type"].Equals("Manager")) //אם מהל- רשימת משתמשים באותו החוג וגם אפשרות למחיקת החוג
+                    {
+                        dr[day] = dr[day].ToString() + "</br> <a href='ManagerList.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
+                    }
+
+                    else
+                    {
+                        if (Session["Type"].Equals("Instructor"))//אם מדריך- רשימה של החוגים שלו עם אפשרות לראות את האנשים אצלו בחוג                              
+                        {
+                            dr[day] = dr[day].ToString() + "</br> <a href='InstructorList.aspx?data=" + s + "'>" + row["name"] + "</a>";
+                        }
+                    }
+                }
+
 
 
             }
@@ -97,10 +111,10 @@ namespace GymProject
 
 
 
-       // protected void Button1_Click(object sender, EventArgs e)
-       // {
-       //     string code = (string)(sender as Button).CommandName;
-       //     Response.Redirect("Charge.aspx?code=" + code);
-       // }
+        // protected void Button1_Click(object sender, EventArgs e)
+        // {
+        //     string code = (string)(sender as Button).CommandName;
+        //     Response.Redirect("Charge.aspx?code=" + code);
+        // }
     }
 }

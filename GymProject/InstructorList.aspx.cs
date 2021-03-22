@@ -19,7 +19,7 @@ namespace GymProject
                 if (!string.IsNullOrEmpty(s))
                 {
                     string[] arr = s.Split('*'); //כל פעם שיש כוכבית- לשים את מה שהיה לפני בתוך תא
-                    string all = "people in " + arr[0] + " at:" + arr[2] + ", " + arr[3] + ":00  ?";
+                    string all = "People in " + arr[0] + " at:" + arr[2] + ", " + arr[3] + ":00  ?";
                     Label1.Text = all;
                     GridView1.DataSource = Ol.showNames(Int32.Parse(arr[4]));
                     GridView1.DataBind();

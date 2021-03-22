@@ -27,16 +27,15 @@ namespace GymProject
             if (Session["Type"].Equals("Subscriber") || Session["Type"].Equals("Manager"))// אם משתמש או מנהל
             {
                 ds = dtl.show();
-
             }
-            /* else
-             {
-                 if (Session["Type"].Equals("Instructor"))// אם מדריך- שאילתה שמציגה את החוגים שלו
-                 {
-                      ds = dtl.();
+            else
+            {
+                if (Session["Type"].Equals("Instructor"))// אם מדריך- שאילתה שמציגה את החוגים שלו
+                {
+                    ds = dtl.showToInstructor(Session["Id"].ToString());
+                }
+            }
 
-                 }
-             }*/
             DataTable dt = ds.Tables[0]; //הטבלה שקיבלנו
 
             // Create sample data for the DataList control.

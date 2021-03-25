@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddClass.aspx" />
     <Content Include="AddDevice.aspx" />
     <Content Include="AddInstructor.aspx" />
     <Content Include="App_Data\Gym.accdb" />
@@ -221,6 +222,13 @@
     <Content Include="Site1.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClass.aspx.cs">
+      <DependentUpon>AddClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddClass.aspx.designer.cs">
+      <DependentUpon>AddClass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\ChargeLogic.cs" />
     <Compile Include="App_Code\ClassesLogic.cs" />
     <Compile Include="AddDevice.aspx.cs">

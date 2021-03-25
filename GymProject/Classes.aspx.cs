@@ -11,6 +11,7 @@ namespace GymProject
     public partial class Classes : System.Web.UI.Page
     {
         ClassesLogic dl = new ClassesLogic();
+        TeacherClassLogic tc = new TeacherClassLogic();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -54,6 +55,23 @@ namespace GymProject
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("ClassTime.aspx");
+        }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            dl.deleteClass(Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text));// מוחרת מהטבלה של החוגים את החוג הספציפי לפי קוד חוג
+            tc.deleteClass(Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text)); // מוחקת מטבלה המחברת בין חוג למדריך את החיבורים לפי קוד חוג
+
+
+            GridView1.EditIndex = -1;
+            GridView1.DataSource = dl.getAllClasses();
+            GridView1.DataBind();
+            //צריך להוסיך מחיקה מעוד 2 טבלאות
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddClass.aspx");
         }
     }
 }

@@ -35,7 +35,8 @@
       </asp:GridView>
 
       <br />
-
+                  <br />
+                  <a href="HomeManager.aspx" class="tColor">HOME</a>
 
 
       </center>

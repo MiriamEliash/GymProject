@@ -38,6 +38,8 @@
          <br />   
 
     <asp:Button ID="Button1" runat="server" Text="New device" OnClick="Button1_Click"/>
+                     <br />
+                  <a href="HomeManager.aspx" class="tColor">HOME</a>
 
 
 

@@ -52,6 +52,8 @@
        <asp:Button ID="Button1"  class="btn btn-sm btn-outline-secondary"  runat="server" Text="save"  OnClick="Button1_Click"></asp:Button>
         <br />
          <a href="Classes.aspx" class="tColor">Back</a>
+                    <br />
+                  <a href="HomeManager.aspx" class="tColor">HOME</a>
         <br />
         <br />
     </form>

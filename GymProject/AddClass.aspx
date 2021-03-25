@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" UnobtrusiveValidationMode="None" AutoEventWireup="true" CodeBehind="AddDevice.aspx.cs" Inherits="GymProject.AddDevice" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" UnobtrusiveValidationMode="None" CodeBehind="AddClass.aspx.cs" Inherits="GymProject.AddClass" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -61,11 +61,11 @@ body#AddDeviceForm{ background-image:url("https://hdwallsource.com/img/2014/9/bl
 
     </style>
 
-</asp:Content>
 
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container">
+     <div class="container">
  
   <div class="AddDevice-form">
     <div class="main-div">
@@ -77,35 +77,32 @@ body#AddDeviceForm{ background-image:url("https://hdwallsource.com/img/2014/9/bl
         <form id="AddDevice"  runat="server" >
 
         <div class="form-group">
-            <asp:TextBox ID="inputCodeDevice" runat="server" type="CodeDevice" class="form-control" placeholder="Code device"></asp:TextBox>
-              <asp:RequiredFieldValidator ID="RequiredUsername1" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputCodeDevice" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="inputCodeClass" runat="server" type="CodeClass" class="form-control" placeholder="Code Class"></asp:TextBox>
+              <asp:RequiredFieldValidator ID="RequiredUsername1" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputCodeClass" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
 
         <div class="form-group">
-            <asp:TextBox ID="inputName" runat="server" type="name" class="form-control" placeholder="Device name"></asp:TextBox>
+            <asp:TextBox ID="inputName" runat="server" type="name" class="form-control" placeholder="Class name"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputName" ForeColor="Red"></asp:RequiredFieldValidator>
 
         </div>
 
         <div class="form-group">
-            <asp:TextBox ID="inputFacilityCost" runat="server" type="FacilityCost" class="form-control" placeholder="Facility cost"></asp:TextBox>
-           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputFacilityCost" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="inputNumOfPeople" runat="server" type="NumOfPeople" class="form-control" placeholder="Number pf people"></asp:TextBox>
+           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputNumOfPeople" ForeColor="Red"></asp:RequiredFieldValidator>
 
         </div>
 
-        <div class="form-group">
-            <asp:TextBox ID="inputFreightCompany" runat="server"  type="FreightCompany" class="form-control"  placeholder="Freight company"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputFreightCompany" ForeColor="Red"></asp:RequiredFieldValidator>
-
-        </div>
 
        <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red" ></asp:Label>
 
-      <asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-sm btn-outline-secondary"  OnClick="Button1_Click" />
+      <asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-sm btn-outline-secondary"  OnClick="Button1_Click"/>
             <br />
-      <a href="Device.aspx" class="tColor">Back</a>
-                        <br />
+      <a href="ClassTime.aspx" class="tColor">Weekly arrangement</a>
+            <br />
                   <a href="HomeManager.aspx" class="tColor">HOME</a>
+
+
 
 
       </form>

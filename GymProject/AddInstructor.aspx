@@ -135,6 +135,8 @@ body#AddInstructorForm{ background-image:url("https://hdwallsource.com/img/2014/
       <asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
             <br />
       <a href="Instructors.aspx" class="tColor">Back</a>
+                <br />
+                  <a href="HomeManager.aspx" class="tColor">HOME</a>
 </center>
 
       </form>

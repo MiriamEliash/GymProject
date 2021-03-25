@@ -32,7 +32,7 @@
 
                     <a class="p-2 text-muted" href="Device.aspx">Device</a>
 
-                    <a class="p-2 text-muted" href=".aspx" spellcheckker="false"
+                    <a class="p-2 text-muted" href="CalanderOfClasses.aspx" spellcheckker="false"
                         style="color: #ccc; background-color: ghostwhite;">Calander</a>
                 </nav>
             </div>

@@ -8,9 +8,11 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+   
 <div class="container">
   <div class="row">
+       <div class="col-1"></div>
+      <div class="col-10">
     <div class="span12">
       <form class="form-horizontal span8" runat="server">
         <fieldset>
@@ -106,13 +108,16 @@
 
           <div class="form-actions">
             <asp:Button ID="Button1" type="submit" class="btn btn-primary" runat="server" Text="Next" OnClick="Button1_Click1" />
-             <a href="Calander.aspx" class="tColor">Back</a>
+             <a href="CalanderOgClasses.aspx" class="tColor">Back</a>
               <br />
               <asp:Label ID="Label5" runat="server" Text="" ForeColor="Red"></asp:Label>
           </div>
+
         </fieldset>
       </form>
     </div>
+          </div>
+      <div class="col-1"></div>
   </div>
 </div>
 </asp:Content>

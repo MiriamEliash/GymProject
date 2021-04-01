@@ -47,13 +47,20 @@ namespace GymProject.App_Code
             return dal.excuteQuery(sql);
         }
 
-       
+        public DataSet showTo(string ID)                                                                             //שאילתה מסובכת2
+        {
+
+            string sql = "SELECT OrderClasses.Code,OrderClasses.chargeId ,OrderClasses.CodeDayTime, DayTime.day1, DayTime.hour1 ,Classes.name AS name, Instructors.ID AS ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON Classes.CodeClass=TeacherClass.CodeClass)INNER JOIN Instructors ON Instructors.ID=TeacherClass.id) WHERE  hour1,day1 ";
+            //string sql = string.Format(("SELECT DayTime.code, (Classes.name AS nameClass FROM ((Classes INNER JOIN TeacherClass ON  Classes.CodeClass =TeacherClass.CodeClass) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)),( Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((Instructors INNER JOIN TeacherClass ON  Instructors.ID =TeacherClass.ID ) INNER JOIN DayTime ON DayTime.codeClassTeacher=TeacherClass.Code)), DayTime.day, DayTime.hour   WHERE DayTime.Code={0}"), code);
+
+            return dal.excuteQuery(sql);
+        }
 
         public DataSet showNames(int codeDayTime) //מקבלת קוד חוג (מתוך שאילתה מסובכת)ומציגה את האנשים שנמצאים באותו החוג
-          {
+        {
                string sql = string.Format("SELECT OrderClasses.CodeDayTime, OrderClasses.chargeId, DayTime.code, Charge.chargeId , Charge.UserId , Subscribers.ID AS ID, Subscribers.[First name],Subscribers.[Last name] FROM ((((OrderClasses INNER JOIN Charge ON  OrderClasses.chargeId =Charge.chargeId) INNER JOIN Subscribers ON Subscribers.ID=Charge.UserId)INNER JOIN DayTime ON DayTime.code=OrderClasses.CodeDayTime) WHERE OrderClasses.CodeDayTime={0} ", codeDayTime);
                return dal.excuteQuery(sql);
-          }
+        }
         /*
           public int codeDayTime(int day, DateTime hour, int codeClass, string InstructorId)//שאילתה שמוצאת למנהל את הקוד של אותו חוג עם המדריך, היום והשעה
           {

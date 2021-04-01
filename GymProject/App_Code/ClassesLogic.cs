@@ -14,6 +14,11 @@ namespace GymProject.App_Code
             string sql = "SELECT * FROM Classes";
             return dal.excuteQuery(sql);
         }
+        public DataSet getName()
+        {
+            string sql = "SELECT name FROM Classes";
+            return dal.excuteQuery(sql);
+        }
 
         public bool newClasses(int CodeClass, string name, int numberOfPeople)
         {

@@ -15,6 +15,7 @@ namespace GymProject.App_Code
             return dal.excuteQuery(sql);
         }
 
+
         public void updateDevice(double price, string nameCompany, int code)
         {
             string sql = string.Format(("UPDATE Devices SET [Facility cost]={0}, [Freight company]='{1}' WHERE [Code device]={2}"), price, nameCompany, code);

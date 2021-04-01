@@ -285,7 +285,7 @@
                             <ItemTemplate>
                                 <div class="row display-flex align-center" style="text-align: center;">
                                     <div class="col-md-2">
-                                        <asp:Button ID="delete" runat="server" CommandName='<%# Eval("proCode")%>' Text="הסרה" class="mCS_img_loaded" OnClick="delete_Click" />
+                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("name")%>'></asp:Label>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="total">
@@ -294,12 +294,12 @@
                                     </div>
                                     <div class="col-md-3 product-count">
                                         <div class="count-inlineflex">
-                                            <asp:Label ID="day" class="qty" runat="server" Text=""></asp:Label>
+                                            <asp:Label ID="day" class="qty" runat="server" Text='<%# Eval("name")%>'></asp:Label>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="product-content">
-                                            <asp:Label ID="hour" class="title" runat="server" Text=""></asp:Label>
+                                            <asp:Label ID="hour" class="title" runat="server" Text='<%# Eval("name")%>'></asp:Label>
 
                                         </div>
                                     </div>

@@ -93,6 +93,7 @@
     <Content Include="HomeSubscribers.aspx" />
     <Content Include="InstructorList.aspx" />
     <Content Include="Instructors.aspx" />
+    <Content Include="Insurance.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="ManagerList.aspx" />
@@ -346,6 +347,13 @@
     <Compile Include="Instructors.aspx.designer.cs">
       <DependentUpon>Instructors.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Insurance.aspx.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance.aspx.designer.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -433,10 +441,10 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <None Include="Web References\wsInsurance\Insurance.wsdl" />
-    <Content Include="Web References\wsInsurance\Reference.map">
+    <None Include="Web References\wsInsurance\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

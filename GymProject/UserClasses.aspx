@@ -292,14 +292,21 @@
                                             <asp:Label ID="name" runat="server" Text=""></asp:Label>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 product-count">
+                                    <div class="col-md-2 product-count">
                                         <div class="count-inlineflex">
-                                            <asp:Label ID="day" class="qty" runat="server" Text='<%# Eval("name")%>'></asp:Label>
+                                            <asp:Label ID="day" class="qty" runat="server" Text='<%# Eval("fullName")%>'></asp:Label>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="product-content">
-                                            <asp:Label ID="hour" class="title" runat="server" Text='<%# Eval("name")%>'></asp:Label>
+                                            <asp:Label ID="hour" class="title" runat="server" Text='<%# Eval("day")%>'></asp:Label>
+
+                                        </div>
+                                    </div>
+
+                                        <div class="col-md-2">
+                                        <div class="product-content">
+                                            <asp:Label ID="Label2" class="title" runat="server" Text='<%# Eval("hour")%>'></asp:Label>
 
                                         </div>
                                     </div>

@@ -16,15 +16,16 @@ namespace GymProject.App_Code
         }
         public DataSet getName()
         {
-            string sql = "SELECT name FROM Classes";
+            string sql = "SELECT name AS name, Details AS Details FROM Classes";
             return dal.excuteQuery(sql);
         }
 
-        public bool newClasses(int CodeClass, string name, int numberOfPeople)
+
+        public bool newClasses(int CodeClass, string name, int numberOfPeople, string Details)
         {
             if (!checkCodeClass(CodeClass))
             {
-                string sql1 = String.Format("INSERT INTO Classes (CodeClass, name, [number of people]) VALUES ('{0}', '{1}','{2}')", CodeClass, name, numberOfPeople);
+                string sql1 = String.Format("INSERT INTO Classes (CodeClass, name, [number of people], Details) VALUES ('{0}', '{1}',{2},'{3}')", CodeClass, name, numberOfPeople, Details);
                 DataSet ds = dal.excuteQuery(sql1);
                 return true;
             }
@@ -42,9 +43,14 @@ namespace GymProject.App_Code
         }
 
 
-        public void updateClass(double code, int numPeople)
+        public void updateClass(int code, int numPeople)
         {
             string sql = "UPDATE Classes SET number of people=" + numPeople + "WHERE CodeClass class=" + code;
+            dal.excuteQuery(sql);
+        }
+        public void updateDetails(int code, string Details)
+        {
+            string sql = "UPDATE Classes SET Details=" + Details + "WHERE CodeClass class=" + code;
             dal.excuteQuery(sql);
         }
 

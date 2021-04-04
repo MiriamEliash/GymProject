@@ -99,6 +99,12 @@ body#AddDeviceForm{ background-image:url("https://hdwallsource.com/img/2014/9/bl
 
         </div>
 
+        <div class="form-group">
+            <asp:TextBox ID="inputDetails" runat="server"  type="Details" class="form-control"  placeholder="Details"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="**שדה זה לא יכול להיות ריק" ControlToValidate="inputDetails" ForeColor="Red"></asp:RequiredFieldValidator>
+
+        </div>
+
        <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red" ></asp:Label>
 
       <asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-sm btn-outline-secondary"  OnClick="Button1_Click" />

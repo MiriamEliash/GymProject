@@ -50,12 +50,10 @@
     </header>
 
 
-    <div>
-        <form runat="server">
+    <div>    
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             //בודי
         </asp:ContentPlaceHolder>
-            </form>
     </div>
 
     <footer class="blog-footer">

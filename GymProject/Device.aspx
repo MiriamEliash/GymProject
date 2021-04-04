@@ -19,6 +19,7 @@
             <asp:BoundField DataField="Device name" HeaderText="name" ReadOnly="True" />
             <asp:BoundField DataField="Facility cost" HeaderText="price" />
             <asp:BoundField DataField="Freight company" HeaderText="company" />
+            <asp:BoundField DataField="Details" HeaderText="Details" />
             <asp:CommandField HeaderText="Edit" ButtonType="Button" ShowEditButton="True" />
             <asp:CommandField ButtonType="Button" HeaderText="Delete" ShowDeleteButton="True" />
         </Columns>

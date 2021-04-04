@@ -19,7 +19,7 @@ namespace GymProject
         protected void Button1_Click(object sender, EventArgs e)
         {
             DeviceLogic dl = new DeviceLogic();
-            if (!dl.newDevice(int.Parse(inputCodeDevice.Text), inputName.Text, double.Parse(inputFacilityCost.Text), inputFreightCompany.Text, 1111))
+            if (!dl.newDevice(int.Parse(inputCodeDevice.Text), inputName.Text, double.Parse(inputFacilityCost.Text), inputFreightCompany.Text, 1111, inputDetails.Text))
                 Label2.Text = "The code is already exist";
             else
                 Label2.Text = "you have successfuly add a new dvice!";

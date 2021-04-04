@@ -18,7 +18,7 @@ namespace GymProject
         protected void Button1_Click(object sender, EventArgs e)
         {
             ClassesLogic dl = new ClassesLogic();
-            if (!dl.newClasses(int.Parse(inputCodeClass.Text), inputName.Text, int.Parse(inputNumOfPeople.Text)))
+            if (!dl.newClasses(int.Parse(inputCodeClass.Text), inputName.Text, int.Parse(inputNumOfPeople.Text), inputDetails.Text))
                 Label2.Text = "The code is already exist";
             else
                 Label2.Text = "you have successfuly add a new class!";

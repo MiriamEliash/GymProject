@@ -14,11 +14,11 @@ namespace GymProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                Repeater1.DataSource = oc.getName();
-                Repeater1.DataBind();
-            }
+         //   if (!IsPostBack)
+         //   {
+         //       Repeater1.DataSource = oc.getName();
+         //       Repeater1.DataBind();
+         //   }
         }
 
         protected void checkout_Click(object sender, EventArgs e)

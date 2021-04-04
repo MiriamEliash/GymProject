@@ -26,7 +26,9 @@ namespace GymProject
             try
             {
                 string numPeople = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[2].Controls[0])).Text;
-                dl.updateClass(int.Parse(numPeople), Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text));
+                string Details = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[3].Controls[0])).Text;
+                dl.updateClass(Int32.Parse(numPeople), Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text));
+                dl.updateDetails(Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text), Details);
                 GridView1.EditIndex = -1;
                 GridView1.DataSource = dl.getAllClasses();
                 GridView1.DataBind();

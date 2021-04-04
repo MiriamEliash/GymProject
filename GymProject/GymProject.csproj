@@ -85,6 +85,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Corona.aspx" />
+    <Content Include="DetailsList.aspx" />
     <Content Include="Device.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -292,6 +293,13 @@
     </Compile>
     <Compile Include="Corona.aspx.designer.cs">
       <DependentUpon>Corona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsList.aspx.cs">
+      <DependentUpon>DetailsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailsList.aspx.designer.cs">
+      <DependentUpon>DetailsList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Device.aspx.cs">
       <DependentUpon>Device.aspx</DependentUpon>

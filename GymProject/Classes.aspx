@@ -16,6 +16,7 @@
             <asp:BoundField DataField="CodeClass" HeaderText="code class" ReadOnly="True" />
             <asp:BoundField DataField="name" HeaderText="name " ReadOnly="True" />
             <asp:BoundField DataField="number of people" HeaderText="number of people" />
+            <asp:BoundField DataField="Details" HeaderText="Details" />
             <asp:CommandField ButtonType="Button" HeaderText="Edit" ShowEditButton="True" />
             <asp:ButtonField ButtonType="Button" HeaderText="Delete" Text="Delete" />
         </Columns>

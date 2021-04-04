@@ -26,7 +26,7 @@
 
                         <a class="p-2 text-muted" href="SportsClubs.aspx">List of sports clubs</a>
 
-                        <a class="p-2 text-muted" href="#" spellcheckker="false"
+                        <a class="p-2 text-muted" href="DetailsList.aspx" spellcheckker="false"
                             style="color: #ccc; background-color: ghostwhite;">List of devices</a>
 
 

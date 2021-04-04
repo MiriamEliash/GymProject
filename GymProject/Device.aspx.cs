@@ -50,7 +50,8 @@ namespace GymProject
             {
                 string price = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[2].Controls[0])).Text;
                 string company = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[3].Controls[0])).Text;
-                dl.updateDevice(Double.Parse(price), company, Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text));
+                string Details = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[4].Controls[0])).Text;
+                dl.updateDevice(Double.Parse(price), company, Int32.Parse(GridView1.Rows[e.RowIndex].Cells[0].Text), Details);
                 GridView1.EditIndex = -1;
                 GridView1.DataSource = dl.getAllDevice();
                 GridView1.DataBind();

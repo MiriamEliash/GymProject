@@ -14,11 +14,16 @@ namespace GymProject.App_Code
             string sql = "SELECT * FROM Devices";
             return dal.excuteQuery(sql);
         }
-
-
-        public void updateDevice(double price, string nameCompany, int code)
+        public DataSet getDetails()
         {
-            string sql = string.Format(("UPDATE Devices SET [Facility cost]={0}, [Freight company]='{1}' WHERE [Code device]={2}"), price, nameCompany, code);
+            string sql = "SELECT [Device name] AS name, Details AS Details FROM Devices";
+            return dal.excuteQuery(sql);
+        }
+
+
+        public void updateDevice(double price, string nameCompany, int code, string Details)
+        {
+            string sql = string.Format(("UPDATE Devices SET [Facility cost]={0}, [Freight company]='{1}',Details='{2}' WHERE [Code device]={3}"), price, nameCompany, Details, code);
             dal.excuteQuery(sql);
         }
         public void deleteDevices(int Code)
@@ -27,11 +32,11 @@ namespace GymProject.App_Code
             dal.excuteQuery(sql);
         }
 
-        public bool newDevice(int CodeDevice, string DeviceName, double FacilityCost, string FreightCompany, int BranchCode)
+        public bool newDevice(int CodeDevice, string DeviceName, double FacilityCost, string FreightCompany, int BranchCode, string Details)
         {
             if (!checkCodeDevice(CodeDevice))
             {
-                string sql1 = String.Format("INSERT INTO Devices ([Code device],[Device name],[Facility cost],[Freight company],[Branch Code]) VALUES ('{0}', '{1}','{2}','{3}','{4}')", CodeDevice, DeviceName, FacilityCost, FreightCompany, BranchCode);
+                string sql1 = String.Format("INSERT INTO Devices ([Code device],[Device name],[Facility cost],[Freight company],[Branch Code], Details) VALUES ('{0}', '{1}','{2}','{3}','{4}','{5}')", CodeDevice, DeviceName, FacilityCost, FreightCompany, BranchCode, Details);
                 DataSet ds = dal.excuteQuery(sql1);
                 return true;
             }

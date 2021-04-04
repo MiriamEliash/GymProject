@@ -16,6 +16,9 @@ namespace GymProject
             if (!IsPostBack)
             {
                 Repeater1.DataSource = dl.getName();
+                
+               // Repeater1.DataSource = dl.getDetails();
+
                 Repeater1.DataBind();
             }
         }

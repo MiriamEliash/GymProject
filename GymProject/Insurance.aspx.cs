@@ -24,8 +24,26 @@ namespace GymProject
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {//שינוי?
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {/*
+            if (!IsPostBack)
+            {
+                GridView1.DataSource = esI.getApproveCustomers("6044");
+                GridView1.DataBind();
+            }*/
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {/*
+            if (!IsPostBack)
+            {
+                GridView1.DataSource = esI.getNotApproveCustomers("6044");
+                GridView1.DataBind();
+            }*/
         }
     }
 }

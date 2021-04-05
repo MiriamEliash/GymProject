@@ -32,6 +32,11 @@
 
 
     </asp:GridView>
+            <br />
+      <asp:Button ID="Button1" runat="server" Text="Improve Insurance" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
+            <br />
+      <asp:Button ID="Button2" runat="server" Text="Not Improve Insurance" class="btn btn-sm btn-outline-secondary" OnClick="Button2_Click" />
+            <br />
         <br />
         <br />
      </center>

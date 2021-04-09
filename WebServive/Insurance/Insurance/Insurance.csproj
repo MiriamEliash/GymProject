@@ -68,19 +68,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\WebService.accdb" />
-    <Content Include="Insurance.asmx" />
     <Content Include="Web.config" />
+    <Content Include="WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\DAL.cs" />
     <Compile Include="App_Code\AgentsLogic.cs" />
     <Compile Include="App_Code\ConnectLogic.cs" />
     <Compile Include="App_Code\CustomersLogic.cs" />
-    <Content Include="App_Code\OrganizationLogic.cs" />
-    <Compile Include="Insurance.asmx.cs">
-      <DependentUpon>Insurance.asmx</DependentUpon>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Content Include="App_Code\OrganizationLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

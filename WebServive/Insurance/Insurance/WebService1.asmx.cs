@@ -9,25 +9,24 @@ using System.Web.Services;
 namespace Insurance
 {
     /// <summary>
-    /// Summary description for Insurance
+    /// Summary description for WebService1
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class Insurance : System.Web.Services.WebService
+    public class WebService1 : System.Web.Services.WebService
     {
         AgentsLogic al = new AgentsLogic();
         ConnectLogic co = new ConnectLogic();
         CustomersLogic cu = new CustomersLogic();
 
-       [WebMethod]
+        [WebMethod]
         public string HelloWorld()
         {
             return "Hello World";
         }
-
         [WebMethod]
         public DataSet getAll(string OrganizationId)
         {

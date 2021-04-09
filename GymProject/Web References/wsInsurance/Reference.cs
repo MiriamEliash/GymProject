@@ -27,8 +27,8 @@ namespace GymProject.wsInsurance {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="InsuranceSoap", Namespace="http://tempuri.org/")]
-    public partial class Insurance : System.Web.Services.Protocols.SoapHttpClientProtocol {
+    [System.Web.Services.WebServiceBindingAttribute(Name="WebService1Soap", Namespace="http://tempuri.org/")]
+    public partial class WebService1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback HelloWorldOperationCompleted;
         
@@ -43,8 +43,8 @@ namespace GymProject.wsInsurance {
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
-        public Insurance() {
-            this.Url = global::GymProject.Properties.Settings.Default.GymProject_wsInsurance_Insurance;
+        public WebService1() {
+            this.Url = global::GymProject.Properties.Settings.Default.GymProject_wsInsurance_WebService1;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

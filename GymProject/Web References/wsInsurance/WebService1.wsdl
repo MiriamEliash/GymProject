@@ -117,7 +117,7 @@
   <wsdl:message name="changeSoapOut">
     <wsdl:part name="parameters" element="tns:changeResponse" />
   </wsdl:message>
-  <wsdl:portType name="InsuranceSoap">
+  <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
       <wsdl:output message="tns:HelloWorldSoapOut" />
@@ -139,7 +139,7 @@
       <wsdl:output message="tns:changeSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="InsuranceSoap" type="tns:InsuranceSoap">
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
       <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
@@ -187,7 +187,7 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:binding name="InsuranceSoap12" type="tns:InsuranceSoap">
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
       <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
@@ -235,12 +235,12 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="Insurance">
-    <wsdl:port name="InsuranceSoap" binding="tns:InsuranceSoap">
-      <soap:address location="https://localhost:44333/Insurance.asmx" />
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44333/WebService1.asmx" />
     </wsdl:port>
-    <wsdl:port name="InsuranceSoap12" binding="tns:InsuranceSoap12">
-      <soap12:address location="https://localhost:44333/Insurance.asmx" />
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44333/WebService1.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

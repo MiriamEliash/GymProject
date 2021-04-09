@@ -214,7 +214,11 @@
     <Content Include="Subscribers.aspx" />
     <Content Include="UserClasses.aspx" />
     <Content Include="UsersGraph.aspx" />
-    <None Include="Web References\wsInsurance\Insurance.disco" />
+    <None Include="Web References\wsInsurance\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsInsurance\WebService1.disco" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -440,11 +444,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
-    <None Include="Web References\wsInsurance\Insurance.wsdl" />
-    <None Include="Web References\wsInsurance\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <None Include="Web References\wsInsurance\WebService1.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -465,16 +465,16 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="https://localhost:44333/Insurance.asmx">
+    <WebReferenceUrl Include="https://localhost:44333/WebService1.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\wsInsurance\</RelPath>
-      <UpdateFromURL>https://localhost:44333/Insurance.asmx</UpdateFromURL>
+      <UpdateFromURL>https://localhost:44333/WebService1.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>GymProject_wsInsurance_Insurance</CachedSettingsPropName>
+      <CachedSettingsPropName>GymProject_wsInsurance_WebService1</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>

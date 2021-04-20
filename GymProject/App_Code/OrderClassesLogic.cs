@@ -49,7 +49,7 @@ namespace GymProject.App_Code
 
 
 
-        public DataSet showTo(string ID)                                                                             //שאילתה מסובכת2
+        public DataSet showTo(string ID)      //שאילתה מסובכת 2- מציגה לכל משתמש את הפרטים של החוגים שהוא בחר
         {
              
             string sql = string.Format("SELECT OrderClasses.Code, OrderClasses.chargeId ,OrderClasses.CodeDayTime, DayTime.code, DayTime.day1 AS day, DayTime.codeClassTeacher, DayTime.hour1 AS hour, Charge.chargeId, Charge.UserId, TeacherClass.Code, TeacherClass.CodeClass, TeacherClass.id , Classes.CodeClass, Classes.name AS name, Instructors.ID, Instructors.[First name]+' '+Instructors.[Last name] AS fullName FROM (((((OrderClasses INNER JOIN Charge ON  OrderClasses.chargeId =Charge.chargeId) INNER JOIN DayTime ON OrderClasses.CodeDayTime=DayTime.code)INNER JOIN TeacherClass ON DayTime.codeClassTeacher=TeacherClass.Code) INNER JOIN Classes ON TeacherClass.CodeClass=Classes.CodeClass)INNER JOIN  Instructors ON TeacherClass.id= Instructors.ID)  WHERE  Charge.UserId='{0}'", ID);
@@ -58,7 +58,7 @@ namespace GymProject.App_Code
             return dal.excuteQuery(sql);
         }
 
-        public DataSet showNames(int codeDayTime) //מקבלת קוד חוג (מתוך שאילתה מסובכת)ומציגה את האנשים שנמצאים באותו החוג
+        public DataSet showNames(int codeDayTime) //מקבלת קוד חוג (מתוך שאילתה מסובכת)ומציגה את האנשים שנמצאים באותו החוג- למנהל ולמדריך
         {
                string sql = string.Format("SELECT OrderClasses.CodeDayTime, OrderClasses.chargeId, DayTime.code, Charge.chargeId , Charge.UserId , Subscribers.ID AS ID, Subscribers.[First name],Subscribers.[Last name] FROM ((((OrderClasses INNER JOIN Charge ON  OrderClasses.chargeId =Charge.chargeId) INNER JOIN Subscribers ON Subscribers.ID=Charge.UserId)INNER JOIN DayTime ON DayTime.code=OrderClasses.CodeDayTime) WHERE OrderClasses.CodeDayTime={0} ", codeDayTime);
                return dal.excuteQuery(sql);

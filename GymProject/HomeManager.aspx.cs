@@ -16,7 +16,7 @@ namespace GymProject
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CalanderOfClasses.aspx.aspx");
+            Response.Redirect("CalanderOfClasses.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)

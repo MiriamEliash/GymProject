@@ -74,7 +74,7 @@
   <ItemGroup>
     <Compile Include="App_Code\DAL.cs" />
     <Compile Include="App_Code\AgentsLogic.cs" />
-    <Compile Include="App_Code\ConnectLogic.cs" />
+    <Compile Include="App_Code\theConnecttLogic.cs" />
     <Compile Include="App_Code\CustomersLogic.cs" />
     <Compile Include="WebService1.asmx.cs">
       <DependentUpon>WebService1.asmx</DependentUpon>

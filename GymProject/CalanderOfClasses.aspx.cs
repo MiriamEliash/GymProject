@@ -81,7 +81,9 @@ namespace GymProject
                         // צריך להוסיף- אם אין מקום- להקפיץ הודעה - בעמ הבא 
                         //אם יש מקום- מובילים לעמ אחר עם אישור או ביטול
                         string s = row["name"] + "*" + row["fullName"] + "*" + day + "*" + hour + "*" + row["code"] + "*" + row["num"];
-                        dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
+                        //< iframe src = "some web page.html" width = "200" height = "200" ></ iframe >
+
+                             dr[day] = dr[day].ToString() + "</br> <a href='Save.aspx?data=" + s + "'>" + row["name"] + ' ' + row["fullName"] + "</a>";
                     }
                 }
                 else

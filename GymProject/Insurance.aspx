@@ -36,6 +36,8 @@
         <asp:Button ID="Button3" runat="server" Text="update select items" class="btn btn-sm btn-outline-secondary" OnClick="Button3_Click" />
 
             <br />
+
+            <br />
       <asp:Button ID="Button1" runat="server" Text="Improve Insurance" class="btn btn-sm btn-outline-secondary" OnClick="Button1_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <asp:Button ID="Button2" runat="server" Text="Not Improve Insurance" class="btn btn-sm btn-outline-secondary" OnClick="Button2_Click" />

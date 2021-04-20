@@ -94,7 +94,7 @@
     <Content Include="InstructorList.aspx" />
     <Content Include="Instructors.aspx" />
     <Content Include="Insurance.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="Login2.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="ManagerList.aspx" />
     <Content Include="Photos\clock.jpg" />
@@ -358,12 +358,12 @@
     <Compile Include="Insurance.aspx.designer.cs">
       <DependentUpon>Insurance.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Login2.aspx.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Login2.aspx.designer.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>

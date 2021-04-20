@@ -19,7 +19,7 @@ namespace Insurance
     public class WebService1 : System.Web.Services.WebService
     {
         AgentsLogic al = new AgentsLogic();
-        ConnectLogic co = new ConnectLogic();
+        theConnecttLogic co = new theConnecttLogic();
         CustomersLogic cu = new CustomersLogic();
 
         [WebMethod]

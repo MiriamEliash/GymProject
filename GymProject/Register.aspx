@@ -174,7 +174,7 @@
 		
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						 have an account? <a href="Login.aspx" class="ml-2">Log In</a>
+						 have an account? <a href="Login2.aspx" class="ml-2">Log In</a>
 					</div>
 
 				</div>

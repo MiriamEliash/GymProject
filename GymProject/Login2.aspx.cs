@@ -38,7 +38,7 @@ namespace GymProject
                     Session["Id"] = ID.Text;
                     Session["nameUser"] = il.getInstructorName(Session["Id"].ToString());
                     Session["Type"] = "Instructor";
-                    Response.Redirect("HomeSubscribers.aspx");
+                    Response.Redirect("HomeInstructor.aspx");
                 }
                 else
                 {

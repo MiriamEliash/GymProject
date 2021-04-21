@@ -70,11 +70,11 @@ body#AddDeviceForm{ background-image:url("https://hdwallsource.com/img/2014/9/bl
   <div class="AddDevice-form">
     <div class="main-div">
         <div class="panel">
-          <h2>Add Device</h2>
+          <h2>Add class</h2>
           <p>Please enter the details</p>
         </div>
 
-        <form id="AddDevice"  runat="server" >
+        <form id="AddClass"  runat="server" >
 
         <div class="form-group">
             <asp:TextBox ID="inputCodeClass" runat="server" type="CodeClass" class="form-control" placeholder="Code Class"></asp:TextBox>

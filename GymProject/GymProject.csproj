@@ -89,6 +89,7 @@
     <Content Include="Device.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="HomeInstructor.aspx" />
     <Content Include="HomeManager.aspx" />
     <Content Include="HomeSubscribers.aspx" />
     <Content Include="InstructorList.aspx" />
@@ -322,6 +323,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeInstructor.aspx.cs">
+      <DependentUpon>HomeInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeInstructor.aspx.designer.cs">
+      <DependentUpon>HomeInstructor.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomeManager.aspx.cs">
       <DependentUpon>HomeManager.aspx</DependentUpon>

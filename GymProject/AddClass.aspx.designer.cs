@@ -15,15 +15,6 @@ namespace GymProject
     {
 
         /// <summary>
-        /// AddDevice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm AddDevice;
-
-        /// <summary>
         /// inputCodeClass control.
         /// </summary>
         /// <remarks>

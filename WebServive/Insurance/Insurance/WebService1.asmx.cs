@@ -50,5 +50,12 @@ namespace Insurance
         {
             co.updateCustomer(ID);
         }
+        [WebMethod]
+        public bool newU(string Id, string FirstName, string LastName, string PhoneNumber, string OrganizationId)
+        {
+            //        newUser(string Id, string FirstName, string LastName, string PhoneNumber, string OrganizationId)
+
+           return cu.newUser(Id, FirstName, LastName, PhoneNumber, OrganizationId);
+        }
     }
 }

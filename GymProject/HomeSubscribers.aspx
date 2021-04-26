@@ -29,6 +29,8 @@
                             style="color: #ccc; background-color:ghostwhite ;">List of devices</a>
 
                         <a class="p-2 text-muted" href="CalanderOfClasses.aspx">Calander</a>
+                                                <a class="p-2 text-muted" href="UserClasses.aspx" spellcheckker="false"
+                            style="color: #ccc; background-color:ghostwhite ;">My classes</a>
 
 
                     </nav>

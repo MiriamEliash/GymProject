@@ -215,11 +215,11 @@
     <Content Include="Subscribers.aspx" />
     <Content Include="UserClasses.aspx" />
     <Content Include="UsersGraph.aspx" />
-    <None Include="Web References\wsInsurance\Reference.map">
+    <None Include="Web References\localhost\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\wsInsurance\WebService1.disco" />
+    <None Include="Web References\localhost\WebService1.disco" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -442,7 +442,7 @@
     <Compile Include="UsersGraph.aspx.designer.cs">
       <DependentUpon>UsersGraph.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Web References\wsInsurance\Reference.cs">
+    <Compile Include="Web References\localhost\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -452,7 +452,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
-    <None Include="Web References\wsInsurance\WebService1.wsdl" />
+    <None Include="Web References\localhost\WebService1.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -475,14 +475,14 @@
   <ItemGroup>
     <WebReferenceUrl Include="https://localhost:44333/WebService1.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\wsInsurance\</RelPath>
+      <RelPath>Web References\localhost\</RelPath>
       <UpdateFromURL>https://localhost:44333/WebService1.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>GymProject_wsInsurance_WebService1</CachedSettingsPropName>
+      <CachedSettingsPropName>GymProject_localhost_WebService1</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>

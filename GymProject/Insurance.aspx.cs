@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymProject.localhost;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,13 +10,13 @@ namespace GymProject
 {
     public partial class Insurance : System.Web.UI.Page
     {
-        /*  Insurance esI = new Insurance();
-          protected void Page_Load(object sender, EventArgs e)
+        WebService1 ws = new WebService1();
+        protected void Page_Load(object sender, EventArgs e)
           {
 
               if (!IsPostBack)
               {
-                //  GridView1.DataSource = esI.getAllCustomers("6044");
+                  GridView1.DataSource = ws.getAll("6044");
                   GridView1.DataBind();
               }
 
@@ -31,7 +32,7 @@ namespace GymProject
           {
               if (!IsPostBack)
               {
-                  //GridView1.DataSource = esI.getApproveCustomers("6044");
+                 GridView1.DataSource = ws.getApproveCustomers("6044");
                   GridView1.DataBind();
               }
           }
@@ -40,7 +41,7 @@ namespace GymProject
           {
               if (!IsPostBack)
               {
-                  //GridView1.DataSource = esI.getNotApproveCustomers("6044");
+                  GridView1.DataSource = ws.getNotApproveCustomers("6044");
                   GridView1.DataBind();
               }
           }
@@ -57,17 +58,16 @@ namespace GymProject
                           CheckBox chkRow = (row.Cells[4].FindControl("CheckBox1") as CheckBox);
                           if (chkRow.Checked)
                           {
-                              string storid = row.Cells[1].Text;
-                              int storname = Int32.Parse(row.Cells[2].Text);
-                              string state = row.Cells[3].Text;
-                              //data = data + storid + " ,  " + storname + " , " + state + "<br>";
-                              //esI.setType(storname);
+                              string storid = row.Cells[0].Text;
+                           //   int storname = Int32.Parse(row.Cells[2].Text);
+                           //   string state = row.Cells[3].Text;
+                           //   data = data + storid + " ,  " + storname + " , " + state + "<br>";
+                              ws.change(storid);
                           }
                       }
                   }
-                 // PopulateGrid();
-                  // lblmsg.Text = data;
+                
 
-          }*/
+          }
     }
 }

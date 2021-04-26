@@ -60,7 +60,7 @@ namespace GymProject.App_Code
 
         public DataSet showNames(int codeDayTime) //מקבלת קוד חוג (מתוך שאילתה מסובכת)ומציגה את האנשים שנמצאים באותו החוג- למנהל ולמדריך
         {
-               string sql = string.Format("SELECT OrderClasses.CodeDayTime, OrderClasses.chargeId, DayTime.code, Charge.chargeId , Charge.UserId , Subscribers.ID AS ID, Subscribers.[First name],Subscribers.[Last name] FROM ((((OrderClasses INNER JOIN Charge ON  OrderClasses.chargeId =Charge.chargeId) INNER JOIN Subscribers ON Subscribers.ID=Charge.UserId)INNER JOIN DayTime ON DayTime.code=OrderClasses.CodeDayTime) WHERE OrderClasses.CodeDayTime={0} ", codeDayTime);
+               string sql = string.Format("SELECT OrderClasses.CodeDayTime, OrderClasses.chargeId, DayTime.code, Charge.chargeId , Charge.UserId , Subscribers.ID AS ID, Subscribers.[First name],Subscribers.[Last name] FROM (((OrderClasses INNER JOIN Charge ON  OrderClasses.chargeId =Charge.chargeId) INNER JOIN Subscribers ON Subscribers.ID=Charge.UserId)INNER JOIN DayTime ON DayTime.code=OrderClasses.CodeDayTime) WHERE OrderClasses.CodeDayTime={0} ", codeDayTime);
                return dal.excuteQuery(sql);
         }
         /*

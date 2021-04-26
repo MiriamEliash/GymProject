@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace GymProject.wsInsurance {
+namespace GymProject.localhost {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -40,19 +40,12 @@ namespace GymProject.wsInsurance {
         
         private System.Threading.SendOrPostCallback changeOperationCompleted;
         
+        private System.Threading.SendOrPostCallback newUOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
-        public WebService1() {
-            this.Url = global::GymProject.Properties.Settings.Default.GymProject_wsInsurance_WebService1;
-            if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
-                this.UseDefaultCredentials = true;
-                this.useDefaultCredentialsSetExplicitly = false;
-            }
-            else {
-                this.useDefaultCredentialsSetExplicitly = true;
-            }
-        }
+      
         
         public new string Url {
             get {
@@ -92,6 +85,9 @@ namespace GymProject.wsInsurance {
         
         /// <remarks/>
         public event changeCompletedEventHandler changeCompleted;
+        
+        /// <remarks/>
+        public event newUCompletedEventHandler newUCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -236,6 +232,43 @@ namespace GymProject.wsInsurance {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/newU", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool newU(string Id, string FirstName, string LastName, string PhoneNumber, string OrganizationId) {
+            object[] results = this.Invoke("newU", new object[] {
+                        Id,
+                        FirstName,
+                        LastName,
+                        PhoneNumber,
+                        OrganizationId});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void newUAsync(string Id, string FirstName, string LastName, string PhoneNumber, string OrganizationId) {
+            this.newUAsync(Id, FirstName, LastName, PhoneNumber, OrganizationId, null);
+        }
+        
+        /// <remarks/>
+        public void newUAsync(string Id, string FirstName, string LastName, string PhoneNumber, string OrganizationId, object userState) {
+            if ((this.newUOperationCompleted == null)) {
+                this.newUOperationCompleted = new System.Threading.SendOrPostCallback(this.OnnewUOperationCompleted);
+            }
+            this.InvokeAsync("newU", new object[] {
+                        Id,
+                        FirstName,
+                        LastName,
+                        PhoneNumber,
+                        OrganizationId}, this.newUOperationCompleted, userState);
+        }
+        
+        private void OnnewUOperationCompleted(object arg) {
+            if ((this.newUCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.newUCompleted(this, new newUCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -361,6 +394,32 @@ namespace GymProject.wsInsurance {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void changeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void newUCompletedEventHandler(object sender, newUCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class newUCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal newUCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591

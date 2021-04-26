@@ -27,9 +27,9 @@ namespace GymProject.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44333/WebService1.asmx")]
-        public string GymProject_wsInsurance_WebService1 {
+        public string GymProject_localhost_WebService1 {
             get {
-                return ((string)(this["GymProject_wsInsurance_WebService1"]));
+                return ((string)(this["GymProject_localhost_WebService1"]));
             }
         }
     }

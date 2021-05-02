@@ -12,8 +12,8 @@
             <br />
      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="500px" CellPadding="3"  BorderStyle="None" BorderWidth="1px"  Height="500px" BackColor="White" BorderColor="#CCCCCC">
          <Columns>
-             <asp:BoundField DataField="[First name]" HeaderText="First Name" />
-             <asp:BoundField DataField="[Last name]" HeaderText="Last Name" />
+             <asp:BoundField DataField="firstName" HeaderText="First Name" />
+             <asp:BoundField DataField="lastName" HeaderText="Last Name" />
          </Columns>
          <FooterStyle BackColor="White" ForeColor="#000066" />
          <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />

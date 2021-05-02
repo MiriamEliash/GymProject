@@ -65,7 +65,7 @@ namespace GymProject.App_Code
 
         public DataSet showToInstructor(string InstructorsID) //שאילתה מסובכת- מראה נתונים לפי ימים ושעות לפי מדריכים
         {
-            string sql = string.Format("SELECT OrderClasses.Code,OrderClasses.chargeId ,OrderClasses.CodeDayTime, DayTime.day1, DayTime.hour1 ,Classes.name AS name, Instructors.ID AS ID, Instructors.[First name]+' '+Instructors.[Last name] as fullName FROM ((((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON Classes.CodeClass=TeacherClass.CodeClass)INNER JOIN Instructors ON Instructors.ID=TeacherClass.id) ORDER BY hour1,day1 WHERE  Instructors.ID={0}", InstructorsID);
+            string sql = string.Format("SELECT DayTime.code, DayTime.codeClassTeacher, DayTime.day1, DayTime.hour1 ,TeacherClass.Code, TeacherClass.CodeClass , TeacherClass.id , Classes.CodeClass, Classes.name AS name FROM ((DayTime INNER JOIN TeacherClass ON  DayTime.codeClassTeacher =TeacherClass.Code) INNER JOIN Classes ON TeacherClass.CodeClass=Classes.CodeClass) ORDER BY hour1,day1 WHERE TeacherClass.id={0}", InstructorsID);
             return dal.excuteQuery(sql);
         }
 

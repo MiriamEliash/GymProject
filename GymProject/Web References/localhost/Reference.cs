@@ -45,7 +45,16 @@ namespace GymProject.localhost {
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
-      
+        public WebService1() {
+            this.Url = global::GymProject.Properties.Settings.Default.GymProject_localhost_WebService1;
+            if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
+                this.UseDefaultCredentials = true;
+                this.useDefaultCredentialsSetExplicitly = false;
+            }
+            else {
+                this.useDefaultCredentialsSetExplicitly = true;
+            }
+        }
         
         public new string Url {
             get {

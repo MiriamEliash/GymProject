@@ -11,7 +11,7 @@ namespace GymProject.App_Code
         private DAL dal = new DAL();
         public DataSet getAllClasses()
         {
-            string sql = "SELECT * FROM Classes";
+            string sql = "SELECT * FROM Classes WHERE Classes.isActive=False";
             return dal.excuteQuery(sql);
         }
         public DataSet getName()
@@ -21,11 +21,12 @@ namespace GymProject.App_Code
         }
 
 
-        public bool newClasses(int CodeClass, string name, int numberOfPeople, string Details)
+        public bool newClasses(int CodeClass, string name, int numberOfPeople, string Details, bool isActive)
         {
+            
             if (!checkCodeClass(CodeClass))
             {
-                string sql1 = String.Format("INSERT INTO Classes (CodeClass, name, [number of people], Details) VALUES ('{0}', '{1}',{2},'{3}')", CodeClass, name, numberOfPeople, Details);
+                string sql1 = String.Format("INSERT INTO Classes (CodeClass, name, [number of people], Details, isActive) VALUES ('{0}','{1}',{2},'{3}',{4})", CodeClass, name, numberOfPeople, Details, True);
                 DataSet ds = dal.excuteQuery(sql1);
                 return true;
             }
@@ -62,7 +63,7 @@ namespace GymProject.App_Code
 
         public void deleteClass(int CodeClass)
         {//delete Instructors
-            string sql = string.Format(("DELETE * FROM Classes WHERE CodeClass={0}"), CodeClass);
+            string sql= string.Format(("UPDATE Classes SET Classes.isActive=False WHERE CodeClass={0}"), CodeClass);
             dal.excuteQuery(sql);
         }
 
